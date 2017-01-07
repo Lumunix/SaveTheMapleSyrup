@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="35601YellowDragon.SaveTheMapleSyrup" version="1.0" primary="true">
+		<Qualifiers>
+			<Scale>240</Scale>
+		</Qualifiers>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="c2runtime.js" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/c2runtime.js">
+				<Candidate type="Path">
+					<Value>c2runtime.js</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="icon-114.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/icon-114.png">
+				<Candidate type="Path">
+					<Value>icon-114.png</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="icon-128.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/icon-128.png">
+				<Candidate type="Path">
+					<Value>icon-128.png</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="icon-16.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/icon-16.png">
+				<Candidate type="Path">
+					<Value>icon-16.png</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="icon-256.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/icon-256.png">
+				<Candidate type="Path">
+					<Value>icon-256.png</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="icon-32.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/icon-32.png">
+				<Candidate type="Path">
+					<Value>icon-32.png</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="index-phone.html" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/index-phone.html">
+				<Candidate type="Path">
+					<Value>index-phone.html</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="jquery-2.0.0.min.js" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/jquery-2.0.0.min.js">
+				<Candidate type="Path">
+					<Value>jquery-2.0.0.min.js</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="loading-logo.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/loading-logo.png">
+				<Candidate type="Path">
+					<Value>loading-logo.png</Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="images">
+				<NamedResource name="4cbx5necg-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/4cbx5necg-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\4cbx5necg-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="alias-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/alias-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\alias-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="back-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/back-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\back-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="backdrop.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/backdrop.png">
+					<Candidate type="Path">
+						<Value>images\backdrop.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="BadgeLogo.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/BadgeLogo.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>images\BadgeLogo.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="ballpower-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/ballpower-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\ballpower-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="boxpower-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/boxpower-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\boxpower-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="bridgepower-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/bridgepower-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\bridgepower-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="clearsave-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/clearsave-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\clearsave-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="confirmmenu-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/confirmmenu-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\confirmmenu-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="continue-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/continue-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\continue-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="cooltext2-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/cooltext2-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\cooltext2-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="cooltext3-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/cooltext3-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\cooltext3-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="cooltext4-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/cooltext4-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\cooltext4-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="cooltext5-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/cooltext5-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\cooltext5-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="cooltext6-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/cooltext6-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\cooltext6-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="cooltext8-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/cooltext8-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\cooltext8-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="cooltext9-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/cooltext9-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\cooltext9-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="creator-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/creator-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\creator-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="credits-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/credits-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\credits-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="creditsplat-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/creditsplat-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\creditsplat-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="delete-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/delete-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\delete-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="delete-sheet1.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/delete-sheet1.png">
+					<Candidate type="Path">
+						<Value>images\delete-sheet1.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="dial-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/dial-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\dial-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="gague-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/gague-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\gague-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="gameover-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/gameover-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\gameover-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="ground.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/ground.png">
+					<Candidate type="Path">
+						<Value>images\ground.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="groundpower-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/groundpower-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\groundpower-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="highscoreonoff-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/highscoreonoff-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\highscoreonoff-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="instructions-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/instructions-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\instructions-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="levelcomplete-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/levelcomplete-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\levelcomplete-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="loader-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/loader-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\loader-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="loader-sheet1.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/loader-sheet1.png">
+					<Candidate type="Path">
+						<Value>images\loader-sheet1.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="lock-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/lock-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\lock-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="lselect-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/lselect-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\lselect-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="music-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/music-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\music-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="play-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/play-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\play-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="powerups.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/powerups.png">
+					<Candidate type="Path">
+						<Value>images\powerups.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="quit-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/quit-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\quit-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="replay-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/replay-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\replay-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="rockpower-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/rockpower-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\rockpower-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="rotate-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/rotate-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\rotate-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="rotate-sheet1.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/rotate-sheet1.png">
+					<Candidate type="Path">
+						<Value>images\rotate-sheet1.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="save-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/save-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\save-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="save-sheet1.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/save-sheet1.png">
+					<Candidate type="Path">
+						<Value>images\save-sheet1.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="scoreadd-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/scoreadd-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\scoreadd-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="scoreadd2-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/scoreadd2-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\scoreadd2-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="settings-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/settings-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\settings-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="share-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/share-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\share-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="slid_btn-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/slid_btn-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\slid_btn-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="slid_line-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/slid_line-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\slid_line-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="sounds-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/sounds-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\sounds-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SplashScreen.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/SplashScreen.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>images\SplashScreen.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="splat-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/splat-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\splat-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="sprite-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/sprite-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\sprite-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="sprite2-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/sprite2-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\sprite2-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="sprite2-sheet1.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/sprite2-sheet1.png">
+					<Candidate type="Path">
+						<Value>images\sprite2-sheet1.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="sprite3-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/sprite3-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\sprite3-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="sprite5-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/sprite5-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\sprite5-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="sprite6-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/sprite6-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\sprite6-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square150x150Logo.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/Square150x150Logo.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>images\Square150x150Logo.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square44x44Logo.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/Square44x44Logo.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>images\Square44x44Logo.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square71x71Logo.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/Square71x71Logo.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>images\Square71x71Logo.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="startnew-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/startnew-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\startnew-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StoreLogo.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/StoreLogo.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>images\StoreLogo.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="submit-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/submit-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\submit-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="syrup-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/syrup-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\syrup-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="syrup-sheet1.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/syrup-sheet1.png">
+					<Candidate type="Path">
+						<Value>images\syrup-sheet1.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="syrupdrop-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/syrupdrop-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\syrupdrop-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="syruplevels-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/syruplevels-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\syruplevels-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="syruplevels-sheet1.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/syruplevels-sheet1.png">
+					<Candidate type="Path">
+						<Value>images\syruplevels-sheet1.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="syruppowerbackground-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/syruppowerbackground-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\syruppowerbackground-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="tiledbackground.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/tiledbackground.png">
+					<Candidate type="Path">
+						<Value>images\tiledbackground.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="title-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/title-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\title-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="touchfollowme-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/touchfollowme-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\touchfollowme-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="trianglepower-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/trianglepower-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\trianglepower-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="turn-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/turn-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\turn-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="tut1-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/tut1-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\tut1-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="userlevels-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/userlevels-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\userlevels-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="warning-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/warning-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\warning-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="welcome-sheet0.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/welcome-sheet0.png">
+					<Candidate type="Path">
+						<Value>images\welcome-sheet0.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Wide310x150Logo.png" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/images/Wide310x150Logo.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>images\Wide310x150Logo.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="media">
+				<NamedResource name="108737__branrainey__boing.m4a" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/media/108737__branrainey__boing.m4a">
+					<Candidate type="Path">
+						<Value>media\108737__branrainey__boing.m4a</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="full_bottle_of_water_place_down_on_table.m4a" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/media/full_bottle_of_water_place_down_on_table.m4a">
+					<Candidate type="Path">
+						<Value>media\full_bottle_of_water_place_down_on_table.m4a</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="popup_close_58.m4a" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/media/popup_close_58.m4a">
+					<Candidate type="Path">
+						<Value>media\popup_close_58.m4a</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="popup_open_08.m4a" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/media/popup_open_08.m4a">
+					<Candidate type="Path">
+						<Value>media\popup_open_08.m4a</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="popup_open_17.m4a" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/media/popup_open_17.m4a">
+					<Candidate type="Path">
+						<Value>media\popup_open_17.m4a</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="select_29.m4a" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/media/select_29.m4a">
+					<Candidate type="Path">
+						<Value>media\select_29.m4a</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="slide_04.m4a" uri="ms-resource://35601YellowDragon.SaveTheMapleSyrup/Files/media/slide_04.m4a">
+					<Candidate type="Path">
+						<Value>media\slide_04.m4a</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

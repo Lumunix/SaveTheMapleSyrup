@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameOver</name>
+    <events>
+        <event-group description="" sid="6696922104287029" title="Game Over">
+            <sub-events>
+                <event-block sid="8836775840334178">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="5923066109653682" type="Touch">
+                            <param id="0" name="Object">Quit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="5579496235375353" type="System" />
+                        <action id="-2" name="Go to layout" sid="8978141891506137" type="System">
+                            <param id="0" name="Layout">LevelSelect</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Ensure the next  level is unlocked</comment>
+                <event-block sid="8014522243258438">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="6742300199679289" type="Touch">
+                            <param id="0" name="Object">Replay</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9898682848254184" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Value">8</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1635155880747376" type="System">
+                            <param id="0" name="Variable">TempTime</param>
+                            <param id="1" name="Value">30</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8087516824563612" type="System">
+                            <param id="0" name="Variable">LevelScore</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="8046705408530978" type="System">
+                            <param id="0" name="Layout">&quot;Level&quot; &amp; LevelNumber</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3942965354691717">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="1200061884347348" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="5239741701704337" type="TotalScore">
+                            <param id="0" name="Text">&quot;Score: &quot; &amp; LevelScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

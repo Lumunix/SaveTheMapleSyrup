@@ -1,0 +1,1367 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelSelect</name>
+    <events>
+        <event-group description="" sid="6217789012367577" title="ProgressLoader">
+            <sub-events>
+                <event-block sid="541998880119176">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="3738164891718802" type="Touch">
+                            <param id="0" name="Object">SyrupLevels</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9522588352851398">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6716264968763037" type="SyrupLevels">
+                                    <param id="0" name="Instance variable">Lock</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="9409852015542535" type="SyrupLevels">
+                                    <param id="0" name="Instance variable">Active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="9082482651265063" type="TouchFollowMe">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9033400677938378" type="Function">
+                                    <param id="0" name="Name">&quot;CallWindow&quot;</param>
+                                    <param id="1" name="Parameter {n}">SyrupLevels.Level{###}SyrupLevels.BestScore{###}SyrupLevels.UnlockLevel{###}SyrupLevels.PointGoal1{###}SyrupLevels.PointGoal2{###}SyrupLevels.PointGoal3</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="9614795476242176" type="System">
+                                    <param id="0" name="Variable">LevelNumber</param>
+                                    <param id="1" name="Value">SyrupLevels.Level</param>
+                                </action>
+                                <action id="0" name="Play" sid="7769770043123859" type="Audio">
+                                    <param id="0" name="Audio file">popup_open_17</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">SoundVolume</param>
+                                    <param id="1" name="Tag (optional)">&quot;Sounds&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="306204514400877">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3138187114003641" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6195977205615648">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="3376263380243951" type="SyrupLevels">
+                                            <param id="0" name="Instance variable">Active</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="2158407368332709" type="Audio">
+                                            <param id="0" name="Audio file">popup_close_58</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">SoundVolume</param>
+                                            <param id="1" name="Tag (optional)">&quot;Sounds&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5142553402252667">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="8168523126204611" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7807427968778731">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6378351317230011" type="Back">
+                                    <param id="0" name="Instance variable">IsPopUp</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="808562529989581" type="Back">
+                                    <param id="0" name="Pin to">TouchFollowMe</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="397426624698387">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="4613669970410815" type="System">
+                                    <param id="0" name="Object">SyrupLevels</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="7818839899248461" type="Level">
+                                    <param id="0" name="Text">&quot;Level : &quot; &amp; SyrupLevels.Level</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="8383966737785502" type="Level">
+                                    <param id="0" name="Y">Self.Y + 10</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="1231760932894797" type="Level">
+                                    <param id="0" name="X">Self.X + 2</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="9574420557172189" type="Lock">
+                                    <param id="0" name="Y">Self.Y  + 8</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Make Sure level 1 is always unlocked</comment>
+                                <event-block sid="7197371232645857">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="566726699174587" type="SyrupLevels">
+                                            <param id="0" name="Instance variable">Level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value"> 1</param>
+                                        </condition>
+                                        <condition id="3" inverted="1" name="Local key exists" sid="5014900212512433" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set local value" sid="900784075488859" type="WebStorage">
+                                            <param id="0" name="Key"> &quot;Level&quot;&amp;SyrupLevels.Level</param>
+                                            <param id="1" name="Value">&quot;1&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Lock level if no progress found</comment>
+                                <event-block sid="1597980318660282">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Local key exists" sid="3541775697181502" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="8556337967387165" type="SyrupLevels">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                        <action id="2" name="Stop" sid="9646333594730251" type="SyrupLevels" />
+                                        <action id="-10" name="Set value" sid="1219856364148088" type="SyrupLevels">
+                                            <param id="0" name="Instance variable">Lock</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3149891736462418">
+                                    <conditions>
+                                        <condition id="3" name="Local key exists" sid="3136201720348647" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;Score&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="7454561568360201" type="SyrupLevels">
+                                            <param id="0" name="Instance variable">BestScore</param>
+                                            <param id="1" name="Value">int(WebStorage.LocalValue (&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;Score&quot;))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>No  Best Score</comment>
+                                <event-block sid="2061562046446803">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Local key exists" sid="433089262758908" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;Score&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="7227554131356634" type="SyrupLevels">
+                                            <param id="0" name="Instance variable">BestScore</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Blank</comment>
+                                <event-block sid="7650966596162806">
+                                    <conditions>
+                                        <condition id="7" name="Compare key value (as number)" sid="5653767305405387" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="4319492262682493" type="SyrupLevels">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                        <action id="2" name="Stop" sid="6953582737214663" type="SyrupLevels" />
+                                        <action id="-10" name="Set value" sid="4795413286329507" type="SyrupLevels">
+                                            <param id="0" name="Instance variable">Lock</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="196049427363929" type="SyrupLevels">
+                                            <param id="0" name="Instance variable">UnlockLevel</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>1</comment>
+                                <event-block sid="8434145221960244">
+                                    <conditions>
+                                        <condition id="7" name="Compare key value (as number)" sid="7470311929232381" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="2071090249447703" type="SyrupLevels">
+                                            <param id="0" name="Frame number">2</param>
+                                        </action>
+                                        <action id="2" name="Stop" sid="4817231443968758" type="SyrupLevels" />
+                                        <action id="-10" name="Set value" sid="7690539109364055" type="SyrupLevels">
+                                            <param id="0" name="Instance variable">Lock</param>
+                                            <param id="1" name="Value"> 0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9890368690787532" type="SyrupLevels">
+                                            <param id="0" name="Instance variable">UnlockLevel</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>2</comment>
+                                <event-block sid="3818854504115362">
+                                    <conditions>
+                                        <condition id="7" name="Compare key value (as number)" sid="5602627381053234" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="5551903471197246" type="SyrupLevels">
+                                            <param id="0" name="Frame number">5</param>
+                                        </action>
+                                        <action id="2" name="Stop" sid="7431163159118142" type="SyrupLevels" />
+                                        <action id="-10" name="Set value" sid="7280939191038185" type="SyrupLevels">
+                                            <param id="0" name="Instance variable">Lock</param>
+                                            <param id="1" name="Value"> 0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="2180884007866231" type="SyrupLevels">
+                                            <param id="0" name="Instance variable">UnlockLevel</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>3</comment>
+                                <event-block sid="5428784833371333">
+                                    <conditions>
+                                        <condition id="7" name="Compare key value (as number)" sid="8894943537778513" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="2877600215861918" type="SyrupLevels">
+                                            <param id="0" name="Frame number">8</param>
+                                        </action>
+                                        <action id="2" name="Stop" sid="3695560219095618" type="SyrupLevels" />
+                                        <action id="-10" name="Set value" sid="2767960816089734" type="SyrupLevels">
+                                            <param id="0" name="Instance variable">Lock</param>
+                                            <param id="1" name="Value"> 0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7910576091531571" type="SyrupLevels">
+                                            <param id="0" name="Instance variable">UnlockLevel</param>
+                                            <param id="1" name="Value">4</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3981218483362007">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2947645545944982" type="SyrupLevels">
+                                            <param id="0" name="Instance variable">Lock</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="210460331981589" type="Lock">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="7201588572883483" type="Level">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2584180841411354">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="5477254774519242" type="SyrupLevels">
+                                            <param id="0" name="Instance variable">Lock</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="8598222157206257" type="Lock">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1446361678138739" type="Level">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>add point goals to save</comment>
+                                <event-block sid="2063690805529258">
+                                    <conditions>
+                                        <condition id="4" inverted="1" name="Session key exists" sid="7160313026362389" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;PointGoal1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set local value" sid="9617003971611537" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;PointGoal1&quot;</param>
+                                            <param id="1" name="Value">SyrupLevels.PointGoal1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5693365860922778">
+                                    <conditions>
+                                        <condition id="4" inverted="1" name="Session key exists" sid="2640128521001044" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;PointGoal2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set local value" sid="2466555306271039" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;PointGoal2&quot;</param>
+                                            <param id="1" name="Value">SyrupLevels.PointGoal2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9494347614856202">
+                                    <conditions>
+                                        <condition id="4" inverted="1" name="Session key exists" sid="4440756209162346" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;PointGoal3&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set local value" sid="5282918498876167" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;PointGoal3&quot;</param>
+                                            <param id="1" name="Value">SyrupLevels.PointGoal3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>revise if not the same</comment>
+                                <event-block sid="194600748353843">
+                                    <conditions>
+                                        <condition id="4" name="Session key exists" sid="5482783745821417" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;PointGoal1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="2092410062251713">
+                                            <conditions>
+                                                <condition id="7" name="Compare key value (as number)" sid="9529250049523608" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;PointGoal1&quot;</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">SyrupLevels.PointGoal1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set local value" sid="8500085487652486" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;PointGoal1&quot;</param>
+                                                    <param id="1" name="Value">SyrupLevels.PointGoal1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="5613611200340487">
+                                    <conditions>
+                                        <condition id="4" name="Session key exists" sid="4082826280182723" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;PointGoal2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="7473987376293663">
+                                            <conditions>
+                                                <condition id="7" name="Compare key value (as number)" sid="837043354654314" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;PointGoal2&quot;</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">SyrupLevels.PointGoal2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set local value" sid="1461764972150862" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;PointGoal2&quot;</param>
+                                                    <param id="1" name="Value">SyrupLevels.PointGoal2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="8510161005036754">
+                                    <conditions>
+                                        <condition id="4" name="Session key exists" sid="1354783484385528" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;PointGoal3&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="9206291915728103">
+                                            <conditions>
+                                                <condition id="7" name="Compare key value (as number)" sid="4069277945663617" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;PointGoal3&quot;</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">SyrupLevels.PointGoal3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set local value" sid="461260851733013" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;Level&quot;&amp;SyrupLevels.Level&amp;&quot;PointGoal3&quot;</param>
+                                                    <param id="1" name="Value">SyrupLevels.PointGoal3</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="412710172394989" title="Scrolling">
+            <sub-events>
+                <comment>Scrolling Control</comment>
+                <event-block sid="4951832416952621">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="4764300809445028" type="Touch" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="4977541472913033" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">Active</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="3701368034247617" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">CurTouchY</param>
+                            <param id="1" name="Value">-1* (self.CurTouchY )</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6998153282115382" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">CurTouchY</param>
+                            <param id="1" name="Value">Touch.Y </param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2897544989467398" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">DiffY</param>
+                            <param id="1" name="Value">-1 * (self.CurTouchY-self.PrevTouchY)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4740348613546023">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="6027899183793634" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9522233101296214">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1081820211416349" type="TouchFollowMe">
+                                    <param id="0" name="Instance variable">DiffY</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6240153017090518" type="TouchFollowMe">
+                                    <param id="0" name="Instance variable">Active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="8800330854469133" type="TouchFollowMe">
+                                    <param id="0" name="Y">lerp(self.Y,self.Y+Self.DiffY,0.06)</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="5498967884541418" type="TouchFollowMe">
+                                    <param id="0" name="Instance variable">DiffY</param>
+                                    <param id="1" name="Value">self.DiffY/10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8799309375686738">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="40499874674932" type="Touch" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="8736748761731349" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">Active</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="3373301901611972" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">PrevTouchY</param>
+                            <param id="1" name="Value">Touch.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9539811860451138" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">CurTouchY</param>
+                            <param id="1" name="Value">Touch.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8705178711283785" title="LevelWindow">
+            <sub-events>
+                <comment>Lock To The Level Window</comment>
+                <event-block collapsed="1" sid="7504701533105233">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="9606230371518335" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="4872489832382422" type="TouchFollowMe">
+                            <param id="0" name="X">240</param>
+                            <param id="1" name="Y">160</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="5457767742292831" type="Gague">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="4364514350596161" type="Dial">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="3786354684693289" type="LevelWindow">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="1513544452605388" type="Play">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="9033386646113982" type="BestScore">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="16272511290464" type="Text">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="279071310487129" type="TopName1">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="8487819573579966" type="TopName2">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="1042037408970973" type="TopName3">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="7144494188263502" type="TopName4">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="613453515790641" type="TopName5">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="5379828659562025" type="Sprite3">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="4932701764836477" type="TopScore1">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="376185733579825" type="TopScore2">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="3701890246748742" type="TopScore3">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="8048684491359019" type="TopScore4">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="5501957484988771" type="TopScore5">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="5228678689041449" type="HighScore">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="4165002372324437" type="RetrieveError">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4724568422604869">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="9342756015098561" type="Splat">
+                                    <param id="0" name="Instance variable">PopUp</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="6581746922024807" type="Splat">
+                                    <param id="0" name="Pin to">ConfirmMenu</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1519330868831968">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="5919620838941359" type="Back">
+                                    <param id="0" name="Instance variable">IsPopUp</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="8300528258033664" type="Back">
+                                    <param id="0" name="Pin to">ConfirmMenu</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4314295565404114">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2034953840834216" type="System">
+                            <param id="0" name="Variable">HighScoresEnabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="559610181851953" type="Sprite3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6709681699538674" type="HighScore">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1305176890958081">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2986735867221448" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="7671486098242574" type="Sprite3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5670027600717329" type="HighScore">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9834228483067254">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="8880043515303544" type="System" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="1652453864492042" type="Splat">
+                            <param id="0" name="Instance variable">PopUp</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="5645298067183085" type="Splat">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2946732772291578">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="5424046889297944" type="System" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="7489159010015811" type="Back">
+                            <param id="0" name="Instance variable">IsPopUp</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="3572593413579743" type="Back">
+                            <param id="0" name="Pin to">ConfirmMenu</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>inital Position</comment>
+                <event-block sid="1142260798527245">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="5028642221655637" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="3502018576381084" type="ConfirmMenu">
+                            <param id="0" name="X">-1 *(LayoutWidth + 241)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Touch Control Events</comment>
+                <event-block sid="4013576502750154">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8230820978074006" type="Touch">
+                            <param id="0" name="Object">Back</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9452288765398309" type="Back">
+                            <param id="0" name="Instance variable">IsPopUp</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="4861381283302847" type="Back">
+                            <param id="0" name="Instance variable">Active</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="1339729869142454" type="System" />
+                        <action id="-2" name="Go to layout" sid="9498252375864871" type="System">
+                            <param id="0" name="Layout">Title</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="467412718901604">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="2763137867234405" type="Touch">
+                            <param id="0" name="Object">Back</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1722633464699435" type="Back">
+                            <param id="0" name="Instance variable">IsPopUp</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="2102187523927049" type="Function">
+                            <param id="0" name="Name">&quot;CloseWindow&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2417598376180962">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="8289355543889231" type="Touch" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9346083529694456" type="ConfirmMenu">
+                            <param id="0" name="Instance variable">Active</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="5490803083641651" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Window Functions</comment>
+                <event-block sid="1935872714193681">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3555091990992286" type="Function">
+                            <param id="0" name="Name">&quot;CloseWindow&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="9090453805292601" type="ConfirmMenu">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2094822370308433" type="System">
+                            <param id="0" name="Seconds">0.01</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8495243074786138" type="System">
+                            <param id="0" name="Variable">Gague</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5174646212886281">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="8336042506823859" type="System">
+                                    <param id="0" name="Object">SyrupLevels</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="2186411499088112" type="SyrupLevels">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5477326964236924">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="158993333066535" type="Back">
+                                    <param id="0" name="Instance variable">IsPopUp</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="9113015479801291" type="Back">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="463079365339525">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3124072729018187" type="Function">
+                            <param id="0" name="Name">&quot;CallWindow&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Clear session storage" sid="1940150071843666" type="WebStorage" />
+                        <action id="-13" name="Set boolean" sid="8848603461572587" type="ConfirmMenu">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7394514402639009" type="System">
+                            <param id="0" name="Variable">EntryCounter</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9895385709460547" type="RetrieveError">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="8517999291351654" type="Function">
+                            <param id="0" name="Name">&quot;RetrieveHighScores&quot;</param>
+                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="134715639046132" type="ConfirmMenu">
+                            <param id="0" name="Y">TouchFollowMe.Y</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1364982179558324" type="LevelWindow">
+                            <param id="0" name="Text">&quot;Level: &quot;&amp;Function.Param(0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8536684462838323" type="BestScore">
+                            <param id="0" name="Text">&quot;Best Score: &quot;&amp;Function.Param(1)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4211084543161669" type="Play">
+                            <param id="0" name="Instance variable">LevelToLoad</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5294554277626654" type="System">
+                            <param id="0" name="Variable">BestScore</param>
+                            <param id="1" name="Value">Function.Param(1)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2752651159880422" type="System">
+                            <param id="0" name="Variable">TargetGoal1</param>
+                            <param id="1" name="Value">Function.Param(3)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4514030943951195" type="System">
+                            <param id="0" name="Variable">TargetGoal2</param>
+                            <param id="1" name="Value">Function.Param(4)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2987260044094231" type="System">
+                            <param id="0" name="Variable">TargetGoal3</param>
+                            <param id="1" name="Value">Function.Param(5)</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="6628229768082593" type="Dial">
+                            <param id="0" name="Angle">330</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="964186828963812" type="System">
+                            <param id="0" name="Variable">DialEnabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9217971352578975">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="825596548017875" type="System">
+                                    <param id="0" name="Object">SyrupLevels</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="7394200290161966" type="SyrupLevels">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="859461891780693">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="156334986319815" type="Back">
+                                    <param id="0" name="Instance variable">IsPopUp</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="9019042046418568" type="Back">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3075696373127632">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9475798061624725" type="Text">
+                                    <param id="0" name="Instance variable">GoalNum</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="3309879638510136" type="Text">
+                                    <param id="0" name="Text">Function.Param(3)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6870320300394629">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9350993196505508" type="Text">
+                                    <param id="0" name="Instance variable">GoalNum</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="5970317527491111" type="Text">
+                                    <param id="0" name="Text">Function.Param(4)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9587495428019311">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="813052989153268" type="Text">
+                                    <param id="0" name="Instance variable">GoalNum</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="5564381161274977" type="Text">
+                                    <param id="0" name="Text">Function.Param(5)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="6456355115502942">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="6742320735684933" type="ConfirmMenu">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">240</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="9586950961027354" type="ConfirmMenu">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="4037445517465136" type="ConfirmMenu">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8947537896630799">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="7529986567231902" type="ConfirmMenu">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">240</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="8673987508501943" type="ConfirmMenu">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="9482925620167387" type="ConfirmMenu">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-1" name="Set X" sid="6773880274881294" type="ConfirmMenu">
+                    <param id="0" name="X">240</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Move Menu Offscreen</comment>
+        <event-block sid="3297036836047478">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="4533418971295165" type="ConfirmMenu">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">LayoutWidth + 240</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3439200412005573" type="ConfirmMenu">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="7797996556450958" type="ConfirmMenu">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4372234252206335">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="4493829226715891" type="ConfirmMenu">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">-1 * (LayoutWidth + 240)</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8218405617244601" type="ConfirmMenu">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="966980764869658" type="ConfirmMenu">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-1" name="Set X" sid="8581805165243459" type="ConfirmMenu">
+                    <param id="0" name="X">LayoutWidth + 240</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="442322685239626">
+            <conditions>
+                <condition id="3" name="On touched object" sid="1660737556555691" type="Touch">
+                    <param id="0" name="Object">Play</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="9128545929572305" type="System">
+                    <param id="0" name="Layout">&quot;Level&quot;&amp;Play.LevelToLoad</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Rotate dial till in correct position</comment>
+        <event-block sid="8975992420624383">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="9854913536617107" type="System" />
+                <condition id="-14" name="Compare variable" sid="2396817652068201" type="System">
+                    <param id="0" name="Variable">DialEnabled</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="3578401549884005" type="ConfirmMenu">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2727733083543374">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9779826019612309" type="System">
+                            <param id="0" name="Variable">BestScore</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="8188504583395314" type="System">
+                            <param id="0" name="Variable">DialEnabled</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="225301040654415">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6036424102503036" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="861540737977828">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6785527081553455" type="System">
+                                    <param id="0" name="Variable">BestScore</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">TargetGoal1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1674263833486419" type="System">
+                                    <param id="0" name="Variable">Gague</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5038199835636982">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5586794802231242" type="System">
+                                    <param id="0" name="Variable">BestScore</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">TargetGoal2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6501152598359259" type="System">
+                                    <param id="0" name="Variable">Gague</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7972050031403532">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6632167178075717" type="System">
+                                    <param id="0" name="Variable">BestScore</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">TargetGoal3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="5080083861796906" type="System">
+                                    <param id="0" name="Variable">Gague</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7619886142570456">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="8058698912744282" type="System">
+                    <param id="0" name="Variable">Gague</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8866928809270128">
+                    <conditions>
+                        <condition id="-13" name="Is between angles" sid="973220083216016" type="Dial">
+                            <param id="0" name="First angle">330</param>
+                            <param id="1" name="Second angle">360</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="4840775004721554" type="Dial">
+                            <param id="0" name="Angle">Dial.Angle +3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1358594103452371">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7375941991717019" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7808364380204021" type="System">
+                            <param id="0" name="Variable">DialEnabled</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3857842105148163">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5803496516132139" type="System">
+                    <param id="0" name="Variable">Gague</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1605083765766006">
+                    <conditions>
+                        <condition id="-13" name="Is between angles" sid="3738799478942827" type="Dial">
+                            <param id="0" name="First angle">330</param>
+                            <param id="1" name="Second angle">410</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="6423356470570165" type="Dial">
+                            <param id="0" name="Angle">Dial.Angle +3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7549795096531897">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6715545925752251" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3571019981318588" type="System">
+                            <param id="0" name="Variable">DialEnabled</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5607319645106856">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5042113198774238" type="System">
+                    <param id="0" name="Variable">Gague</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1495994987952256">
+                    <conditions>
+                        <condition id="-13" name="Is between angles" sid="2333837112004879" type="Dial">
+                            <param id="0" name="First angle">330</param>
+                            <param id="1" name="Second angle">450</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="1900325218534322" type="Dial">
+                            <param id="0" name="Angle">Dial.Angle +3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4633480717341743">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7512478499804979" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2909496152601219" type="System">
+                            <param id="0" name="Variable">DialEnabled</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Move Menu Onscreen</comment>
+        <event-group description="" sid="4171804461194829" title="Highscores">
+            <sub-events>
+                <comment>SendScore</comment>
+                <event-block disabled="1" sid="6323343711816754">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="4877955366583995" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Post to URL" sid="7979780241875684" type="AJAX">
+                            <param id="0" name="Tag">&quot;PostScore&quot;</param>
+                            <param id="1" name="URL">&quot;http://www.yellowdragon.net/cgi-bin/savescores.php?name=&quot;&amp; Alias &amp;&quot;&amp;score=&quot; &amp; TotalScore &amp;&quot;&amp;level=&quot; &amp; LevelNumber </param>
+                            <param id="2" name="Data">&quot;&quot;</param>
+                            <param id="3" name="Method">&quot;POST&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7100792507218947">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3853167540721759" type="Function">
+                            <param id="0" name="Name">&quot;RetrieveHighScores&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="665693784464548" type="System">
+                            <param id="0" name="Variable">HighScoresEnabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Request URL" sid="7687324460201316" type="AJAX">
+                            <param id="0" name="Tag">&quot;GetScores&quot;</param>
+                            <param id="1" name="URL">&quot;http://www.yellowdragon.net/cgi-bin/getscores.php?level=&quot; &amp; Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5270434312692492">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="7233174692063336" type="AJAX">
+                            <param id="0" name="Tag">&quot;GetScores&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="3644289421620444" type="System">
+                            <param id="0" name="Group name">&quot;DoArray&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3925375331499655">
+                    <conditions>
+                        <condition id="1" name="On error" sid="4586879805440146" type="AJAX">
+                            <param id="0" name="Tag">&quot;GetScores&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8498433515307078" type="RetrieveError">
+                            <param id="0" name="Text">&quot;Unable To Retrieve High Scores&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5106806633698157" type="TopName1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1894705683500612" type="TopName2">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4666435413148374" type="TopName3">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5557325155027414" type="TopName4">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7698699589075931" type="TopName5">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7820390876778883" type="TopScore1">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9190369840826909" type="TopScore2">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4747581958210481" type="TopScore3">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5043950404621334" type="TopScore4">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5990962431152128" type="TopScore5">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2006290846077869" type="RetrieveError">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Array Population</comment>
+                <event-group collapsed="1" description="" inactive="1" sid="814395396093853" title="DoArray">
+                    <sub-events>
+                        <event-block sid="8978329363165508">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="741786845782557" type="System">
+                                    <param id="0" name="First value">EntryCounter</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set at X" sid="8791871553167598" type="Array">
+                                    <param id="0" name="X">EntryCounter</param>
+                                    <param id="1" name="Value">tokenat(Ajax.LastData,EntryCounter,&quot;|&quot;)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="221214985211306" type="System">
+                                    <param id="0" name="Variable">EntryCounter</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="4541093210694328">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="6036512328463831" type="System">
+                            <param id="0" name="First value">EntryCounter</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="937519124237844" type="System">
+                            <param id="0" name="Group name">&quot;DoArray&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1149355377171721" type="TopName1">
+                            <param id="0" name="Text">Array.At(0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8633353050687631" type="TopScore1">
+                            <param id="0" name="Text">Array.At(1)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="895054238137201" type="TopName2">
+                            <param id="0" name="Text">Array.At(2)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="376347657771618" type="TopScore2">
+                            <param id="0" name="Text">Array.At(3)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2937195489840368" type="TopName3">
+                            <param id="0" name="Text">Array.At(4)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7670466106653941" type="TopScore3">
+                            <param id="0" name="Text">Array.At(5)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6923770861043745" type="TopName4">
+                            <param id="0" name="Text">Array.At(6)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7629995108332644" type="TopScore4">
+                            <param id="0" name="Text">Array.At(7)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8646780630312084" type="TopName5">
+                            <param id="0" name="Text">Array.At(8)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="248096508960993" type="TopScore5">
+                            <param id="0" name="Text">Array.At(9)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8926011777792138" type="System">
+                            <param id="0" name="Variable">TopScoreThreshold</param>
+                            <param id="1" name="Value">Array.At(9)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

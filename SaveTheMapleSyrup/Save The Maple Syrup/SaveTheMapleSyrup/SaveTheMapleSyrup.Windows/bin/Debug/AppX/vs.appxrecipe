@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-J4V4OTC</Machine>
+    <WindowsUser>dylan</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>4A41AFD3-C04D-44CD-A18B-7A680519541D</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Windows\bld\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>FFAEA206ED394DA9288444F50853432A055187A3716568B80DC3F1DEA30E900E</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>4A41AFD3-C04D-44CD-A18B-7A680519541D_1.2.0.0_neutral__12xbe2nex53tr</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>4A41AFD3-C04D-44CD-A18B-7A680519541D_12xbe2nex53tr!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>4A41AFD3-C04D-44CD-A18B-7A680519541D</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=YellowDragon</RegisteredPackagePublisher>
+    <RegisteredVersion>1.2.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-01-14T04:02:45.471</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Windows\index-win.html">
+      <PackagePath>index-win.html</PackagePath>
+      <Modified>2016-01-14T03:59:39.646</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Windows\about.html">
+      <PackagePath>about.html</PackagePath>
+      <Modified>2013-11-01T21:56:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Windows\support.html">
+      <PackagePath>support.html</PackagePath>
+      <Modified>2013-11-01T21:56:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Windows\privacy.html">
+      <PackagePath>privacy.html</PackagePath>
+      <Modified>2013-11-01T21:56:18.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\channel.html">
+      <PackagePath>channel.html</PackagePath>
+      <Modified>2014-09-04T21:17:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Windows\images\logo.png">
+      <PackagePath>images\logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T21:26:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Windows\images\smalllogo.png">
+      <PackagePath>images\smalllogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T21:26:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Windows\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T21:26:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Windows\images\storelogo.png">
+      <PackagePath>images\storelogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T21:26:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\ground.png">
+      <PackagePath>images\ground.png</PackagePath>
+      <Modified>2016-01-14T03:59:09.574</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\syrup-sheet0.png">
+      <PackagePath>images\syrup-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.220</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\syrup-sheet1.png">
+      <PackagePath>images\syrup-sheet1.png</PackagePath>
+      <Modified>2016-01-14T03:59:09.619</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\tiledbackground.png">
+      <PackagePath>images\tiledbackground.png</PackagePath>
+      <Modified>2016-01-14T03:59:09.942</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\title-sheet0.png">
+      <PackagePath>images\title-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:09.856</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\syrupdrop-sheet0.png">
+      <PackagePath>images\syrupdrop-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:09.887</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\splat-sheet0.png">
+      <PackagePath>images\splat-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.797</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\gameover-sheet0.png">
+      <PackagePath>images\gameover-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:09.694</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\syruppowerbackground-sheet0.png">
+      <PackagePath>images\syruppowerbackground-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:09.604</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\back-sheet0.png">
+      <PackagePath>images\back-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:09.652</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\boxpower-sheet0.png">
+      <PackagePath>images\boxpower-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.937</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\powerups.png">
+      <PackagePath>images\powerups.png</PackagePath>
+      <Modified>2016-01-14T03:59:09.720</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\ballpower-sheet0.png">
+      <PackagePath>images\ballpower-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.705</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\rockpower-sheet0.png">
+      <PackagePath>images\rockpower-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.057</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\bridgepower-sheet0.png">
+      <PackagePath>images\bridgepower-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:09.734</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\trianglepower-sheet0.png">
+      <PackagePath>images\trianglepower-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:12.198</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\startnew-sheet0.png">
+      <PackagePath>images\startnew-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:09.892</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\instructions-sheet0.png">
+      <PackagePath>images\instructions-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:09.977</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\creator-sheet0.png">
+      <PackagePath>images\creator-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.006</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\replay-sheet0.png">
+      <PackagePath>images\replay-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.038</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\quit-sheet0.png">
+      <PackagePath>images\quit-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.064</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\save-sheet0.png">
+      <PackagePath>images\save-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.666</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\save-sheet1.png">
+      <PackagePath>images\save-sheet1.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.564</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\rotate-sheet0.png">
+      <PackagePath>images\rotate-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.603</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\rotate-sheet1.png">
+      <PackagePath>images\rotate-sheet1.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.641</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\delete-sheet0.png">
+      <PackagePath>images\delete-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.336</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\delete-sheet1.png">
+      <PackagePath>images\delete-sheet1.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.355</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\share-sheet0.png">
+      <PackagePath>images\share-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.563</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\loader-sheet0.png">
+      <PackagePath>images\loader-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.777</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\loader-sheet1.png">
+      <PackagePath>images\loader-sheet1.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.150</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\confirmmenu-sheet0.png">
+      <PackagePath>images\confirmmenu-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.227</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\submit-sheet0.png">
+      <PackagePath>images\submit-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.807</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\turn-sheet0.png">
+      <PackagePath>images\turn-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.730</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\backdrop.png">
+      <PackagePath>images\backdrop.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.145</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\groundpower-sheet0.png">
+      <PackagePath>images\groundpower-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.163</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\userlevels-sheet0.png">
+      <PackagePath>images\userlevels-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\lselect-sheet0.png">
+      <PackagePath>images\lselect-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.042</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\syruplevels-sheet0.png">
+      <PackagePath>images\syruplevels-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.073</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\syruplevels-sheet1.png">
+      <PackagePath>images\syruplevels-sheet1.png</PackagePath>
+      <Modified>2016-01-14T03:59:10.968</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\touchfollowme-sheet0.png">
+      <PackagePath>images\touchfollowme-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.380</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\lock-sheet0.png">
+      <PackagePath>images\lock-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:12.676</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\settings-sheet0.png">
+      <PackagePath>images\settings-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.253</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\clearsave-sheet0.png">
+      <PackagePath>images\clearsave-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.300</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\warning-sheet0.png">
+      <PackagePath>images\warning-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.280</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\slid_line-sheet0.png">
+      <PackagePath>images\slid_line-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.295</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\slid_btn-sheet0.png">
+      <PackagePath>images\slid_btn-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.348</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\sounds-sheet0.png">
+      <PackagePath>images\sounds-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.403</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\music-sheet0.png">
+      <PackagePath>images\music-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.464</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\sprite-sheet0.png">
+      <PackagePath>images\sprite-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:12.457</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\gague-sheet0.png">
+      <PackagePath>images\gague-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.713</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\dial-sheet0.png">
+      <PackagePath>images\dial-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.393</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\play-sheet0.png">
+      <PackagePath>images\play-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.459</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\levelcomplete-sheet0.png">
+      <PackagePath>images\levelcomplete-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.601</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\scoreadd-sheet0.png">
+      <PackagePath>images\scoreadd-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.452</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\scoreadd2-sheet0.png">
+      <PackagePath>images\scoreadd2-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.452</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\continue-sheet0.png">
+      <PackagePath>images\continue-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.576</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\sprite2-sheet0.png">
+      <PackagePath>images\sprite2-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:12.432</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\sprite2-sheet1.png">
+      <PackagePath>images\sprite2-sheet1.png</PackagePath>
+      <Modified>2016-01-14T03:59:12.418</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\credits-sheet0.png">
+      <PackagePath>images\credits-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.618</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\cooltext2-sheet0.png">
+      <PackagePath>images\cooltext2-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.681</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\cooltext3-sheet0.png">
+      <PackagePath>images\cooltext3-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.710</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\cooltext4-sheet0.png">
+      <PackagePath>images\cooltext4-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.802</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\4cbx5necg-sheet0.png">
+      <PackagePath>images\4cbx5necg-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:37.401</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\sprite3-sheet0.png">
+      <PackagePath>images\sprite3-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:12.045</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\alias-sheet0.png">
+      <PackagePath>images\alias-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.835</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\cooltext5-sheet0.png">
+      <PackagePath>images\cooltext5-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.797</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\cooltext6-sheet0.png">
+      <PackagePath>images\cooltext6-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.966</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\highscoreonoff-sheet0.png">
+      <PackagePath>images\highscoreonoff-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:13.012</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\cooltext8-sheet0.png">
+      <PackagePath>images\cooltext8-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.880</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\cooltext9-sheet0.png">
+      <PackagePath>images\cooltext9-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:11.885</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\creditsplat-sheet0.png">
+      <PackagePath>images\creditsplat-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:12.202</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\welcome-sheet0.png">
+      <PackagePath>images\welcome-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:12.057</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\tut1-sheet0.png">
+      <PackagePath>images\tut1-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:16.175</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\sprite5-sheet0.png">
+      <PackagePath>images\sprite5-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:15.940</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\images\sprite6-sheet0.png">
+      <PackagePath>images\sprite6-sheet0.png</PackagePath>
+      <Modified>2016-01-14T03:59:17.227</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\icon-16.png">
+      <PackagePath>icon-16.png</PackagePath>
+      <Modified>2016-01-12T22:19:53.088</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\icon-32.png">
+      <PackagePath>icon-32.png</PackagePath>
+      <Modified>2016-01-12T22:19:53.089</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\icon-114.png">
+      <PackagePath>icon-114.png</PackagePath>
+      <Modified>2016-01-12T22:19:53.085</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\icon-128.png">
+      <PackagePath>icon-128.png</PackagePath>
+      <Modified>2016-01-12T22:19:53.086</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\loading-logo.png">
+      <PackagePath>loading-logo.png</PackagePath>
+      <Modified>2016-01-12T22:19:53.090</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\icon-256.png">
+      <PackagePath>icon-256.png</PackagePath>
+      <Modified>2016-01-12T22:19:53.088</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Windows\WindowsStoreProxy.xml">
+      <PackagePath>WindowsStoreProxy.xml</PackagePath>
+      <Modified>2013-05-23T20:20:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\c2runtime.js">
+      <PackagePath>c2runtime.js</PackagePath>
+      <Modified>2016-01-14T04:41:25.705</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\jquery-2.0.0.min.js">
+      <PackagePath>jquery-2.0.0.min.js</PackagePath>
+      <Modified>2013-09-03T18:31:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\media\108737__branrainey__boing.m4a">
+      <PackagePath>media\108737__branrainey__boing.m4a</PackagePath>
+      <Modified>2016-01-12T22:19:53.082</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\media\full_bottle_of_water_place_down_on_table.m4a">
+      <PackagePath>media\full_bottle_of_water_place_down_on_table.m4a</PackagePath>
+      <Modified>2016-01-12T22:19:53.085</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\media\popup_close_58.m4a">
+      <PackagePath>media\popup_close_58.m4a</PackagePath>
+      <Modified>2016-01-12T22:19:53.092</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\media\popup_open_08.m4a">
+      <PackagePath>media\popup_open_08.m4a</PackagePath>
+      <Modified>2016-01-12T22:19:53.098</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\media\popup_open_17.m4a">
+      <PackagePath>media\popup_open_17.m4a</PackagePath>
+      <Modified>2016-01-12T22:19:53.101</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\media\select_29.m4a">
+      <PackagePath>media\select_29.m4a</PackagePath>
+      <Modified>2016-01-12T22:19:53.106</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Shared\media\slide_04.m4a">
+      <PackagePath>media\slide_04.m4a</PackagePath>
+      <Modified>2016-01-12T22:19:53.109</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dylan\Desktop\Save The Maple Syrup\SaveTheMapleSyrup\SaveTheMapleSyrup.Windows\bin\Debug\ReverseMap\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2016-01-14T04:02:45.438</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\">
+      <Name>Microsoft.WinJS.2.0</Name>
+      <Version>1.0.9600.17018</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.2.0, MinVersion=1.0.9600.17018</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\Microsoft.WinJS.2.0.appx</AppxLocation>
+      <MoreInfo>http://go.microsoft.com/fwlink/%3fLinkId=260891</MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

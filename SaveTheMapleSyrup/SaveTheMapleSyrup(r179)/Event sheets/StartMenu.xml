@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>StartMenu</name>
+    <events>
+        <event-group description="" sid="1372333790413854" title="Title Screen">
+            <sub-events>
+                <event-block sid="1127477250646866">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="2832690105019727" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6791897646323841">
+                            <conditions>
+                                <condition id="3" name="Local key exists" sid="524340510073419" type="WebStorage">
+                                    <param id="0" name="Key">&quot;Alias&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3513150605409858" type="System">
+                                    <param id="0" name="Variable">Alias</param>
+                                    <param id="1" name="Value">WebStorage.LocalValue(&quot;Alias&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7962677633607323">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2079321174960305" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7527059434543885" type="System">
+                                    <param id="0" name="Variable">Flag</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1580379193947799">
+                            <conditions>
+                                <condition id="3" name="Local key exists" sid="7570859707328323" type="WebStorage">
+                                    <param id="0" name="Key">&quot;Highscores&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7016001054448121" type="System">
+                                    <param id="0" name="Variable">HighScoresEnabled</param>
+                                    <param id="1" name="Value">int(WebStorage.LocalValue(&quot;Highscores&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2455416436910047">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6623316726595127" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set local value" sid="1857125354391869" type="WebStorage">
+                                    <param id="0" name="Key">&quot;Highscores&quot;</param>
+                                    <param id="1" name="Value">&quot;1&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1489525533974482" type="System">
+                                    <param id="0" name="Variable">HighScoresEnabled</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4599142790113329">
+                            <conditions>
+                                <condition id="3" inverted="1" name="Local key exists" sid="3388225963068181" type="WebStorage">
+                                    <param id="0" name="Key">&quot;SoundVolume&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1360252523033498" type="System">
+                                    <param id="0" name="Variable">SoundVolume</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1837993755203441">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2554516462432834" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7158215028949821" type="System">
+                                    <param id="0" name="Variable">SoundVolume</param>
+                                    <param id="1" name="Value">float((WebStorage.LocalValue(&quot;SoundVolume&quot;)))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1536556897681896">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="3730735859992286" type="Syrup" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8927335193253931" type="Syrup" />
+                    </actions>
+                </event-block>
+                <event-block sid="971808218122198">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="4662325794756766" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="414045580289339" type="System">
+                            <param id="0" name="Object to create">Syrup</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="X">random(30, 450)</param>
+                            <param id="3" name="Y">-45</param>
+                        </action>
+                        <action behavior="Physics" id="18" name="Set elasticity" sid="2375814128717557" type="Syrup">
+                            <param id="0" name="Elasticity">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="5870409962643618" type="Syrup">
+                            <param id="0" name="Frame number">8</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="5179972476981513">
+            <conditions>
+                <condition id="3" name="On touched object" sid="3993798096975816" type="Touch">
+                    <param id="0" name="Object">Startnew</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="4629201941076338" type="System">
+                    <param id="0" name="Variable">Flag</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="9015813782971017" type="System">
+                    <param id="0" name="Layout">LevelSelect</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6347261926427143">
+            <conditions>
+                <condition id="3" name="On touched object" sid="7227899585298534" type="Touch">
+                    <param id="0" name="Object">Startnew</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="8362489804533061" type="System">
+                    <param id="0" name="Variable">Flag</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4089617075396317" type="System">
+                    <param id="0" name="Layout">AliasChange</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6953887082329566">
+            <conditions>
+                <condition id="3" name="On touched object" sid="7720956363225603" type="Touch">
+                    <param id="0" name="Object">Instructions</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="1515209959060678" type="System">
+                    <param id="0" name="Layout">Tutorial</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Load Sounds and inital data</comment>
+        <event-block sid="3657584562518284">
+            <conditions>
+                <condition id="3" name="On touched object" sid="1685777014248101" type="Touch">
+                    <param id="0" name="Object">Settings</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="3343204941521278" type="System">
+                    <param id="0" name="Layout">Settings</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

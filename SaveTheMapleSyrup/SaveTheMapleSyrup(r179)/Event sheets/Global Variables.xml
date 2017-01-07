@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Global Variables</name>
+    <events>
+        <variable constant="0" name="Multiplier" sid="7743233912687905" static="0" type="number">0</variable>
+        <variable constant="0" name="TotalScore" sid="2368921653602437" static="0" type="number">0</variable>
+        <comment>Variables for level selection</comment>
+        <variable constant="0" name="Gague" sid="9598315763624446" static="0" type="number">0</variable>
+        <variable constant="0" name="TargetGoal1" sid="8510755477191447" static="0" type="number">0</variable>
+        <variable constant="0" name="TargetGoal3" sid="6513262521109972" static="0" type="number">0</variable>
+        <variable constant="0" name="TargetGoal2" sid="5735020825642253" static="0" type="number">0</variable>
+        <variable constant="0" name="TotalLevels" sid="9627434060031667" static="0" type="number">50</variable>
+        <variable constant="0" name="BestScore" sid="5097388291014348" static="0" type="number">0</variable>
+        <comment>General Game Variables</comment>
+        <variable constant="0" name="DialEnabled" sid="1155086330697922" static="0" type="number">1</variable>
+        <variable constant="0" name="RandomGen" sid="85539926646377" static="0" type="number">0</variable>
+        <variable constant="0" name="MenuSpeed" sid="2648510360742337" static="0" type="number">250</variable>
+        <variable constant="0" name="Item" sid="7625165860939744" static="0" type="number">0</variable>
+        <variable constant="0" name="Enabled" sid="4934469420998033" static="0" type="number">1</variable>
+        <variable constant="0" name="SyrupPower" sid="1666267700785941" static="0" type="number">8</variable>
+        <variable constant="0" name="LevelNumber" sid="8154573039328396" static="0" type="number">0</variable>
+        <variable constant="0" name="LevelScore" sid="3533477058528814" static="0" type="number">0</variable>
+        <variable constant="0" name="CurrentTime" sid="5571138544974441" static="0" type="number">0</variable>
+        <variable constant="0" name="TempTime" sid="9573491775965197" static="0" type="number">60</variable>
+        <comment>Settings menu variables</comment>
+        <variable constant="0" name="SoundVolume" sid="1827988649695414" static="0" type="number">0</variable>
+        <variable constant="0" name="Active" sid="9394957043389869" static="0" type="number">1</variable>
+        <comment>High Score Variables and Storage</comment>
+        <variable constant="0" name="Alias" sid="2498572554764166" static="0" type="text">System</variable>
+        <variable constant="0" name="HighScoresEnabled" sid="2890706863616001" static="0" type="number">1</variable>
+        <variable constant="0" name="EntryCounter" sid="4447747877582619" static="0" type="number">0</variable>
+        <variable constant="0" name="TopScoreThreshold" sid="9656839351888656" static="0" type="text"></variable>
+        <comment>Flags for change name screen</comment>
+        <variable constant="0" name="Flag" sid="4319190949729844" static="0" type="number">0</variable>
+    </events>
+</c2eventsheet>

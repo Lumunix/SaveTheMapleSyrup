@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Tutorial</name>
+    <events>
+        <variable constant="0" name="TutorialNumber" sid="5249769887773509" static="0" type="number">0</variable>
+        <event-block sid="6130087801344799">
+            <conditions>
+                <condition id="3" name="On touched object" sid="832367011631523" type="Touch">
+                    <param id="0" name="Object">Back</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="6375898379069598" type="System">
+                    <param id="0" name="Layout">Title</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1897879286683537">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9737404524034414" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="8497217896414796" type="Syrup">
+                    <param id="0" name="Frame number">8</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="685811003508562">
+            <conditions>
+                <condition id="3" name="On touched object" sid="5114136312676261" type="Touch">
+                    <param id="0" name="Object">Continue</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5960087506745798">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1252949217346996" type="System">
+                            <param id="0" name="Variable">TutorialNumber</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="4470843006703591" type="System">
+                            <param id="0" name="Variable">TutorialNumber</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="2589275211229766" type="System">
+                            <param id="0" name="Layout">&quot;Tutorial&quot;&amp; TutorialNumber</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3201956090728253">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1520034577883015" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5392458570212454" type="System">
+                            <param id="0" name="Variable">TutorialNumber</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="7586694808308866" type="System">
+                            <param id="0" name="Layout">Title</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

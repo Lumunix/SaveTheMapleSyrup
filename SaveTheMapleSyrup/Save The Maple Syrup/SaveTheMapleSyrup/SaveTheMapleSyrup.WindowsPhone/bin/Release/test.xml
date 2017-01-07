@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='C:\ProgramData\Windows App Certification Kit\wp-results.xsl'?>
+<REPORT xml:lang="en-US" OVERALL_RESULT="PASS" VERSION="10.0" LATEST_VERSION="TRUE" UPDATE_DOWNLOAD_URL="" TOOLSET_ARCHITECTURE="x64" SecureBoot="FALSE" APP_TYPE="WindowsPhone" PUBLISHER_DISPLAY_NAME="CN=45036692-F926-440F-8FD3-D258E2B8D5BC" APP_NAME="35601YellowDragon.SaveTheMapleSyrup" APP_VERSION="1.1.0.1" OSVERSION="10.0.10586.0" OS="Microsoft Windows 10 Pro" PER_USER_APPLICATION="" PARTIAL_RUN="FALSE" LCID="1033" VALIDATION_TYPE="UI" ReportGenerationTime="1/14/2016 10:46:59 PM" ID="e3e27a4fcb0b9bd283eafac5a7fc4141">
+  <REQUIREMENTS>
+    <REQUIREMENT NUMBER="1" TITLE="Clean reversible install test" RATIONALE="A clean, reversible, installation allows users to successfully manage (deploy, and remove) applications on their system." />
+    <REQUIREMENT NUMBER="2" TITLE="Install to the correct folders test" RATIONALE="Windows provides specific locations in the file system to store programs and software components, shared application data, and application data specific to a user." />
+    <REQUIREMENT NUMBER="3" TITLE="Digitally signed file test" RATIONALE="An Authenticode digital signature allows users to be sure that the software is genuine. It also allows detection if a file has been tampered with e.g. infected by a virus." />
+    <REQUIREMENT NUMBER="4" TITLE="Support x64 Windows test" RATIONALE="To maintain compatibility with 64-bit versions of Windows, it is necessary that applications should natively support 64-bit or at minimum 32-bit Windows based applications to run seamlessly on 64-bit." />
+    <REQUIREMENT NUMBER="5" TITLE="OS version checking test" RATIONALE="Applications must not perform version checks for equality (== 5.1). If you need a specific feature, check whether the feature is available. If you need Windows XP, check for Windows XP or later (&gt;= 5.1), This way, your detection code will continue to work on future versions of Windows. Driver installers and uninstall modules should never check the OS version." />
+    <REQUIREMENT NUMBER="6" TITLE="User account control (UAC) test" RATIONALE="Most applications do not require administrator privileges at run time, and should be just fine running as a standard-user. Windows applications must have a manifest (embedded or external) to define its execution level that tells OS the privileges needed to run the application." />
+    <REQUIREMENT NUMBER="7" TITLE="Adhere to system restart manager messages" RATIONALE="In a critical shutdown, applications that return FALSE to WM_QUERYENDSESSION will be sent WM_ENDSESSION and closed, while those that time out in response to WM_QUERYENDSESSION will be terminated." />
+    <REQUIREMENT NUMBER="8" TITLE="Safe mode test" RATIONALE="By default, most drivers and services that did not come preinstalled with Windows are not started in Safe Mode. They should remain disabled unless they are needed for basic operations of the system or for diagnostic and recovery purposes." />
+    <REQUIREMENT NUMBER="9" TITLE="Multiuser session test" RATIONALE="Windows users should be able to run concurrent sessions without conflict or disruption.  Applications must ensure that when running in multiple sessions either locally or remotely, the normal functionality of the application should not be impacted. Application settings and data files should not be persisted across users. A user’s privacy and preferences should be isolated to the user’s session." />
+    <REQUIREMENT NUMBER="10" TITLE="Deployment and launch tests" RATIONALE="Application failures such as crashes and hangs are a major disruption to users and cause frustration. Eliminating such failures improves application stability and reliability, and overall, provides users with a better application experience." />
+    <REQUIREMENT NUMBER="11" TITLE="Compatibility and resiliency test" RATIONALE="When Windows detects that an application has operated in an incompatible manner, it applies a compatibility fix that causes the application to behave correctly, ensuring a positive user experience. Applications should not rely on this behavior since it is only provided to allow legacy applications to work correctly on Windows." />
+    <REQUIREMENT NUMBER="12" TITLE="Package compliance test" RATIONALE="The package manifest was missing one or more required attributes.">
+      <TEST INDEX="77" NAME="Application count" DESCRIPTION="One package should not define more than one app in the manifest." EXECUTIONTIME="00h:00m:00s.87ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="31" NAME="App manifest" DESCRIPTION="App manifest must include valid entries for all required fields." EXECUTIONTIME="00h:00m:00s.92ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="74" NAME="Bundle manifest" DESCRIPTION="Bundle manifest must include valid entries for all required fields." EXECUTIONTIME="00h:00m:00s.84ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="75" NAME="Package size" DESCRIPTION="Package file size should not be greater than 4 gigabytes." EXECUTIONTIME="00h:00m:00s.89ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="13" TITLE="Windows security best practices test" RATIONALE="An application should not change the default Windows security settings." />
+    <REQUIREMENT NUMBER="14" TITLE="Windows security features test" RATIONALE="Applications must opt-into Windows security features.">
+      <TEST INDEX="33" NAME="Binary analyzer" DESCRIPTION="Analysis of security features enabled on binaries" EXECUTIONTIME="00h:00m:01s.10ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="70" NAME="Banned file analyzer" DESCRIPTION="Analysis of application to detect known insecure files" EXECUTIONTIME="00h:00m:00s.78ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="62" NAME="Private code signing" DESCRIPTION="App should not package private code signing key files." EXECUTIONTIME="00h:00m:00s.85ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="15" TITLE="Supported API test" RATIONALE="The application should only refer to the APIs allowed by the Windows SDK for Windows Store Apps.">
+      <TEST INDEX="72" NAME="Supported APIs" DESCRIPTION="Windows Phone App must only use supported platform APIs." EXECUTIONTIME="00h:00m:00s.82ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="17" TITLE="Performance test" RATIONALE="The application should have a fast and responsive launch and suspend experience while consuming a reasonable amount of system resources (CPU, File IO, Memory etc.) to enable fast switching and multitasking between previously unopened applications." />
+    <REQUIREMENT NUMBER="19" TITLE="App manifest resources tests" RATIONALE="The App Package Manifest should have valid resources defined in the resources.pri file, as per the App Packaging Specification and App Manifest Schema.">
+      <TEST INDEX="45" NAME="App resources" DESCRIPTION="The package should have valid resources defined in the resources.pri file." EXECUTIONTIME="00h:00m:00s.65ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="61" NAME="Branding" DESCRIPTION="App should not use the default images packed by windows SDK samples or Visual Studio." EXECUTIONTIME="00h:00m:01s.16ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="20" TITLE="Debug configuration test" RATIONALE="The App should not install any debug binaries.">
+      <TEST INDEX="46" NAME="Debug configuration" DESCRIPTION="The App should not install any debug binaries." EXECUTIONTIME="00h:00m:00s.86ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="21" TITLE="File encoding test" RATIONALE="Packages containing an HTML5 Windows Store app must have correct file encoding.">
+      <TEST INDEX="49" NAME="UTF-8 file encoding" DESCRIPTION="Packages containing an HTML5 Windows Store app must have correct file encoding." EXECUTIONTIME="00h:00m:00s.83ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="22" TITLE="Direct3D Feature Test" RATIONALE="App should use the Direct3D capability correctly." />
+    <REQUIREMENT NUMBER="23" TITLE="App Capabilities test" RATIONALE="Packages declaring special-use capabilities will have to provide justifications during the onboarding process.">
+      <TEST INDEX="52" NAME="Special use capabilities" DESCRIPTION="Packages declaring special-use capabilities will have to provide justifications during the onboarding process." EXECUTIONTIME="00h:00m:00s.86ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="24" TITLE="Windows Runtime metadata validation" RATIONALE="Metadata needs to be conformant and consistent across all generation sources.">
+      <TEST INDEX="56" NAME="ExclusiveTo attribute" DESCRIPTION="A class must not implement an interface that is marked ExclusiveTo another class." EXECUTIONTIME="00h:00m:01s.49ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="57" NAME="Type location" DESCRIPTION="Types must be defined in the metadata file with the longest matching namespace." EXECUTIONTIME="00h:00m:00s.62ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="55" NAME="Type name case-sensitivity" DESCRIPTION="Namespace and type names must not vary only by casing." EXECUTIONTIME="00h:00m:00s.63ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="54" NAME="Type name correctness" DESCRIPTION="Only system types can be in the Windows namespace and no types can be in the global namespace." EXECUTIONTIME="00h:00m:00s.64ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="58" NAME="General metadata correctness" DESCRIPTION="Metadata files must meet various requirements in order to be valid and correct." EXECUTIONTIME="00h:00m:01s.44ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="53" NAME="Properties" DESCRIPTION="Write-only and indexer properties may not be used. Corresponding getter and setter methods must match in type." EXECUTIONTIME="00h:00m:00s.63ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="25" TITLE="Package sanity test" RATIONALE="Validation of the app package contents to ensure correctness.">
+      <TEST INDEX="63" NAME="Platform appropriate files" DESCRIPTION="App should not install files that do not match the target processor architecture." EXECUTIONTIME="00h:00m:00s.85ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="26" TITLE="High-DPI support" RATIONALE="The application needs to set DPI-aware to make the UI look consistently good across a wide variety of high-DPI display settings." />
+    <REQUIREMENT NUMBER="27" TITLE="Resource Usage Test" RATIONALE="WinJS background tasks need to call close() to free resource.">
+      <TEST INDEX="68" NAME="WinJS background task" DESCRIPTION="WinJS background tasks need to call close() to free resource." EXECUTIONTIME="00h:00m:00s.91ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+  </REQUIREMENTS>
+  <APPLICATIONS>
+    <Installed_Programs>
+      <Program Name="35601YellowDragon.SaveTheMapleSyrup" Type="Application" Source="AppxPackage" Publisher="CN=45036692-F926-440F-8FD3-D258E2B8D5BC" Version="1.1.0.1" Language="1033" InstallDate="01/15/2016 03:46:38" RootDirPath="C:\WINDOWS\temp\appcert_3AF4\35601YellowDragon.SaveTheMapleSyrup_1.1.0.1_neutral__e1hxcvvsx92r8" Id="0000922ca484ec90af070a54bebde8953edc00000904">
+        <Indicators>
+          <WindowsStoreAppManifestIndicators>
+            <PackageManifest PackageFullName="35601yellowdragon.savethemaplesyrup_1.1.0.1_neutral__e1hxcvvsx92r8">
+              <Package>
+                <Identity Name="35601YellowDragon.SaveTheMapleSyrup" Version="1.1.0.1" Publisher="CN=45036692-F926-440F-8FD3-D258E2B8D5BC" ProcessorArchitecture="neutral" />
+                <PhoneIdentity PhoneProductId="55d618a7-1a8e-4de3-b4e1-97a1bcb7d51e" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+                <Properties>
+                  <DisplayName>SaveTheMapleSyrup</DisplayName>
+                  <Description>Save The Maple Syrup!!!</Description>
+                  <PublisherDisplayName>YellowDragon</PublisherDisplayName>
+                  <Logo>images\StoreLogo.png</Logo>
+                </Properties>
+                <Prerequisites>
+                  <OSMinVersion>6.3.1</OSMinVersion>
+                  <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
+                </Prerequisites>
+                <Resources>
+                  <Resource Language="EN-US" />
+                  <Resource Scale="240" />
+                </Resources>
+                <Applications>
+                  <Application Id="App" StartPage="index-phone.html">
+                    <VisualElements DisplayName="SaveTheMapleSyrup" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png" Description="Save The Maple Syrup!!!" ForegroundText="light" BackgroundColor="transparent">
+                      <DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" Square71x71Logo="images\Square71x71Logo.png" />
+                      <SplashScreen Image="images\SplashScreen.png" />
+                      <InitialRotationPreference>
+                        <Rotation Preference="landscape" />
+                      </InitialRotationPreference>
+                    </VisualElements>
+                  </Application>
+                </Applications>
+                <Capabilities>
+                  <Capability Name="internetClientServer" />
+                </Capabilities>
+                <Dependencies>
+                  <PackageDependency Name="Microsoft.Phone.WinJS.2.1" MinVersion="1.0.9651.0" />
+                </Dependencies>
+              </Package>
+            </PackageManifest>
+          </WindowsStoreAppManifestIndicators>
+        </Indicators>
+        <StaticProperties>
+          <Files Id="0000e3744d70cc721a2e64fa72e599ef01b8c0971f0c">
+            <File Name="index-phone.html" Id="00008a12e58c834dfcaf153fea3fb6816b2e62839d5e" Size="0xd4b" BinaryType="DATA_ONLY" LowerCaseLongPath="c:\windows\temp\appcert_3af4\35601yellowdragon.savethemaplesyrup_1.1.0.1_neutral__e1hxcvvsx92r8\index-phone.html" LongPathHash="0000436162350094fa144fd8d1fc9daa675ffd4786cf" />
+            <File Name="c2runtime.js" Id="0000d57891b329a072314519a4a05478918bfa082f59" Size="0x23288f" BinaryType="DATA_ONLY" LowerCaseLongPath="c:\windows\temp\appcert_3af4\35601yellowdragon.savethemaplesyrup_1.1.0.1_neutral__e1hxcvvsx92r8\c2runtime.js" LongPathHash="0000fc561984da03cb197585dbc64ce080f71487fd74" />
+            <File Name="jquery-2.0.0.min.js" Id="0000ba255c4dddd8cb623150842f8b1607baeb6aeec0" Size="0x14476" BinaryType="DATA_ONLY" LowerCaseLongPath="c:\windows\temp\appcert_3af4\35601yellowdragon.savethemaplesyrup_1.1.0.1_neutral__e1hxcvvsx92r8\jquery-2.0.0.min.js" LongPathHash="0000101b873eadee7a541e73211b0015e3711540ab1c" />
+            <File Name="resources.pri" Id="0000125ba683fc7a601f2f1db0aa15e2f063cc9ec1c8" Size="0x3528" BinaryType="DATA_ONLY" LowerCaseLongPath="c:\windows\temp\appcert_3af4\35601yellowdragon.savethemaplesyrup_1.1.0.1_neutral__e1hxcvvsx92r8\resources.pri" LongPathHash="0000fba3a0170de74f7050f5cdf115b533e98268d41d" />
+            <File Name="channel.html" Id="00004717bb798caac117f2b4c824b70e817aff44eaec" Size="0x3e" BinaryType="DATA_ONLY" LowerCaseLongPath="c:\windows\temp\appcert_3af4\35601yellowdragon.savethemaplesyrup_1.1.0.1_neutral__e1hxcvvsx92r8\channel.html" LongPathHash="0000f5d9cbee890ef68a9c32fef8bff20cef4522352f" />
+          </Files>
+        </StaticProperties>
+      </Program>
+    </Installed_Programs>
+  </APPLICATIONS>
+  <DEPENDENCY_INFORMATION>
+    <AitStaticAnalysis Type="Template">
+      <AitFile ErrorCode="0" Name="channel.html" Id="00004717bb798caac117f2b4c824b70e817aff44eaec" />
+      <AitFile ErrorCode="0" Name="index-phone.html" Id="00008a12e58c834dfcaf153fea3fb6816b2e62839d5e">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Application" />
+          <AitFeature Name="WinJS.UI.processAll" />
+          <AitFeature Name="Windows.ApplicationModel.Activation" />
+          <AitFeature Name="Windows.UI.WebUI.WebUIApplication.addEventListener" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="jquery-2.0.0.min.js" Id="0000ba255c4dddd8cb623150842f8b1607baeb6aeec0" />
+      <AitFile ErrorCode="0" Name="c2runtime.js" Id="0000d57891b329a072314519a4a05478918bfa082f59">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="document.addEventListener" />
+          <AitFeature Name="document.body.appendChild" />
+          <AitFeature Name="document.createElement" />
+          <AitFeature Name="document.createEvent" />
+          <AitFeature Name="document.createTextNode" />
+          <AitFeature Name="document.getElementById" />
+          <AitFeature Name="document.getElementsByTagName" />
+          <AitFeature Name="document.oncontextmenu" />
+          <AitFeature Name="document.onselectstart" />
+          <AitFeature Name="document.referrer" />
+          <AitFeature Name="location.hostname" />
+          <AitFeature Name="location.pathname" />
+          <AitFeature Name="navigator.appName" />
+          <AitFeature Name="navigator.appVersion" />
+          <AitFeature Name="navigator.cookieEnabled" />
+          <AitFeature Name="navigator.javaEnabled" />
+          <AitFeature Name="navigator.language" />
+          <AitFeature Name="navigator.onLine" />
+          <AitFeature Name="navigator.platform" />
+          <AitFeature Name="navigator.product" />
+          <AitFeature Name="navigator.userAgent" />
+          <AitFeature Name="navigator.userAgent.indexOf" />
+          <AitFeature Name="navigator.vendor" />
+          <AitFeature Name="window.addEventListener" />
+          <AitFeature Name="window.applicationCache" />
+          <AitFeature Name="window.applicationCache.addEventListener" />
+          <AitFeature Name="window.console.log" />
+          <AitFeature Name="window.ext.IDTK_SRV_BOX2D" />
+          <AitFeature Name="window.ext.IDTK_SRV_BOX2D.makeCall" />
+          <AitFeature Name="window.fbAsyncInit" />
+          <AitFeature Name="window.indexedDB" />
+          <AitFeature Name="window.innerHeight" />
+          <AitFeature Name="window.innerWidth" />
+          <AitFeature Name="window.location.hash" />
+          <AitFeature Name="window.location.hostname" />
+          <AitFeature Name="window.location.pathname" />
+          <AitFeature Name="window.location.protocol" />
+          <AitFeature Name="window.location.reload" />
+          <AitFeature Name="window.location.search" />
+          <AitFeature Name="window.location.search.indexOf" />
+          <AitFeature Name="window.location.toString" />
+          <AitFeature Name="window.navigator" />
+          <AitFeature Name="window.parent.location" />
+          <AitFeature Name="window.setTimeout" />
+          <AitFeature Name="window.top.location" />
+        </AitCategory>
+      </AitFile>
+    </AitStaticAnalysis>
+  </DEPENDENCY_INFORMATION>
+</REPORT>

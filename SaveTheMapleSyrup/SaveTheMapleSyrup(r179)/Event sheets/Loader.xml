@@ -1,0 +1,1598 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Loader</name>
+    <events>
+        <variable constant="0" name="LAST" sid="5067536669022688" static="0" type="text"></variable>
+        <event-group collapsed="1" description="" sid="914825809382217" title="Game">
+            <sub-events>
+                <comment>Destroy boxes when touching them. Lock out clicks when menus are open</comment>
+                <event-block sid="8340376941185345">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1226346087754645" type="Touch">
+                            <param id="0" name="Object">Box</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6499226818066898">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7810137264632055" type="System">
+                                    <param id="0" name="Variable">Enabled</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="1627130365061495" type="Box" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="692393336797523">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="4267088559082115" type="Touch">
+                            <param id="0" name="Object">Bridge</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7370921569275449">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9276246695837674" type="System">
+                                    <param id="0" name="Variable">Enabled</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="7328384154730009" type="Bridge" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9591726899505092">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8476305404946909" type="Touch">
+                            <param id="0" name="Object">Ball</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1607493989847957">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6416821181041434" type="System">
+                                    <param id="0" name="Variable">Enabled</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="4960037420455353" type="Ball" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="571667280588428">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1522010438426798" type="Touch">
+                            <param id="0" name="Object">Rock</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="602265497272982">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8989159869326747" type="System">
+                                    <param id="0" name="Variable">Enabled</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="4473119256185449" type="Rock" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="367764615442904">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="4659139583708014" type="Touch">
+                            <param id="0" name="Object">Triangle</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9011310025054348">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5193795248428536" type="System">
+                                    <param id="0" name="Variable">Enabled</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="3263316468436917" type="Triangle" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>If the syrup falls outside the layout, destroy it, display game over text, then restart after 2 seconds.</comment>
+                <comment>If syrup is on the floor (it overlaps it 10 pixels down)</comment>
+                <event-block sid="7589931580277951">
+                    <conditions>
+                        <condition id="9" name="Is overlapping at offset" sid="8705000613352674" type="Syrup">
+                            <param id="0" name="Object">Ground</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">5</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="6832846437525012" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="3174904854249638" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="508685778291603">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="3373313410252543" type="Syrup" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5934372857016795" type="Syrup" />
+                    </actions>
+                </event-block>
+                <event-block sid="6729039753690034">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="4562146074639059" type="Box" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="3863467868029375" type="Box" />
+                    </actions>
+                </event-block>
+                <event-block sid="6036768377900839">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="4176107414965892" type="Rock" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="810603381689581" type="Rock" />
+                    </actions>
+                </event-block>
+                <event-block sid="5357776759144174">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="5293050492388078" type="Ball" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6504299615670651" type="Ball" />
+                    </actions>
+                </event-block>
+                <event-block sid="7822503901303715">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="9498359692581702" type="Bridge" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="206468090099617" type="Bridge" />
+                    </actions>
+                </event-block>
+                <event-block sid="6591851657271671">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="8486153489698999" type="Triangle" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="1755623814922185" type="Triangle" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="2360565483712079" title="Scoring">
+            <sub-events>
+                <event-block sid="6989830938086752">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="3746958950165936" type="Syrup">
+                            <param id="0" name="Object">Box</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="2466812808733394" type="System">
+                            <param id="0" name="Variable">LevelScore</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2722451056759204" type="Score">
+                            <param id="0" name="Text">LevelScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1496762217936584">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5547185712437502" type="Syrup">
+                            <param id="0" name="Object">Ground</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="115526139765803" type="System">
+                            <param id="0" name="Variable">LevelScore</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5551878830413365" type="Score">
+                            <param id="0" name="Text">LevelScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5199837463636624">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="632537198473189" type="Syrup">
+                            <param id="0" name="Object">Rock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="4230876417904488" type="System">
+                            <param id="0" name="Variable">LevelScore</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6452588907083058" type="Score">
+                            <param id="0" name="Text">LevelScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3423826823782403">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4709576382700102" type="Syrup">
+                            <param id="0" name="Object">Bridge</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="7312375831554033" type="System">
+                            <param id="0" name="Variable">LevelScore</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2070872114575044" type="Score">
+                            <param id="0" name="Text">LevelScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7151081672295982">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9922957767419132" type="Syrup">
+                            <param id="0" name="Object">Ball</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="7182886316604613" type="System">
+                            <param id="0" name="Variable">LevelScore</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2904368948436511" type="Score">
+                            <param id="0" name="Text">LevelScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1653554990457159">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9777792094740238" type="Syrup">
+                            <param id="0" name="Object">Triangle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="7344096197957734" type="System">
+                            <param id="0" name="Variable">LevelScore</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5918233555437866" type="Score">
+                            <param id="0" name="Text">LevelScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Creates Syrup Drop powerups</comment>
+                <event-block sid="7618491629952199">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="4276359656871429" type="System">
+                            <param id="0" name="Interval (seconds)">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="572090333574946" type="System">
+                            <param id="0" name="Object to create">SyrupDrop</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(30, 450)</param>
+                            <param id="3" name="Y">-30</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="586806142389378" type="System">
+                            <param id="0" name="Object to create">SyrupDrop</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(30, 450)</param>
+                            <param id="3" name="Y">-30</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="1231578120131163" type="System">
+                            <param id="0" name="Object to create">SyrupDrop</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(30, 450)</param>
+                            <param id="3" name="Y">-30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>TempScore handles the maple syrup powerup</comment>
+                <event-block sid="4670540540560559">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="7986201940435795" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="1316128433787505" type="Score">
+                            <param id="0" name="Text">LevelScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9185320096869479">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="6942254963910789" type="Box" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="7365707256548515" type="System">
+                            <param id="0" name="Variable">LevelScore</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6564995892484966" type="Score">
+                            <param id="0" name="Text">LevelScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6011149205268957">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="7718978682085363" type="SyrupDrop" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="1573592910666348" type="System">
+                            <param id="0" name="Variable">LevelScore</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7954076687709982" type="Score">
+                            <param id="0" name="Text">LevelScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1059378427496796">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="1212343863933692" type="Rock" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="2452223558103479" type="System">
+                            <param id="0" name="Variable">LevelScore</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8515860249108258" type="Score">
+                            <param id="0" name="Text">LevelScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7878058842656516">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="1081986701698965" type="Ball" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="522502361101377" type="System">
+                            <param id="0" name="Variable">LevelScore</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6145318759538489" type="Score">
+                            <param id="0" name="Text">LevelScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3466404125814169">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="8482923924698609" type="Bridge" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="2586099748436421" type="System">
+                            <param id="0" name="Variable">LevelScore</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3213455038910616" type="Score">
+                            <param id="0" name="Text">LevelScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="891817879392465">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="1202235870266139" type="Triangle" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="1853466126506682" type="System">
+                            <param id="0" name="Variable">LevelScore</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7689638064447419" type="Score">
+                            <param id="0" name="Text">LevelScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="8741609291426613">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="212170681150718" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7346743153722908">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="3472880162316624" type="System">
+                            <param id="0" name="Object">Menu</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Closes menu when out of syrup</comment>
+        <event-block collapsed="1" sid="3082304816933353">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="4332207722279356" type="System">
+                    <param id="0" name="Variable">SyrupPower</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1573117263525087">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="5938597759508107" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1834340806420523" type="SyrupPowerBackground">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8362075905256826">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6769156361440607" type="Powerups">
+                                    <param id="0" name="Instance variable">number</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Right Menu on Screen</comment>
+                                <event-block sid="3919960172260755">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="2347829163266324" type="SyrupPowerBackground">
+                                            <param id="0" name="Instance variable">moved</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-26" name="Move to layer" sid="4895296284143342" type="Powerups">
+                                            <param id="0" name="Layer">2</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="744807185177499" type="SyrupPowerBackground">
+                                            <param id="0" name="Layer">2</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="9628377791372217" type="SyrupPowerBackground">
+                                            <param id="0" name="Pin to">Powerups</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="659410816137709" type="Menu">
+                                            <param id="0" name="Pin to">Powerups</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="8205460065801777" type="Powerups">
+                                            <param id="0" name="X">Powerups.X+Powerups.Height-260</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="391520386334124" type="SyrupPowerBackground" />
+                                        <action id="-9" name="Set value" sid="6711373503405433" type="System">
+                                            <param id="0" name="Variable">Enabled</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="8676254355738291" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="7721326724318475" type="SyrupPowerBackground">
+                                            <param id="0" name="Instance variable">moved</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="7096691384777731" type="SyrupPowerBackground">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="8478971616590691">
+                                            <conditions>
+                                                <condition id="-19" name="Pick all" sid="5158774071043284" type="System">
+                                                    <param id="0" name="Object">Powerups</param>
+                                                </condition>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="3106215401849906" type="Powerups">
+                                                    <param id="0" name="Instance variable">number</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-26" name="Move to layer" sid="4896970287287075" type="Powerups">
+                                                    <param id="0" name="Layer">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="2594972490208836">
+                                            <conditions>
+                                                <condition id="-19" name="Pick all" sid="8518368539827152" type="System">
+                                                    <param id="0" name="Object">SyrupPowerBackground</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-26" name="Move to layer" sid="6709127928766748" type="SyrupPowerBackground">
+                                                    <param id="0" name="Layer">1</param>
+                                                </action>
+                                                <action id="-24" name="Move to top" sid="5290863988749943" type="SyrupPowerBackground" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>right menu move to bottom to prevent parallax</comment>
+                        <event-block sid="9372241205527423">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5978075407663544" type="Powerups">
+                                    <param id="0" name="Instance variable">number</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Move to layer" sid="5768179280347582" type="Powerups">
+                                    <param id="0" name="Layer">1</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="9776587929318007" type="SyrupPowerBackground" />
+                            </actions>
+                        </event-block>
+                        <comment>right menu move to bottom to prevent parallax</comment>
+                        <event-block sid="8540235543811085">
+                            <conditions />
+                            <actions>
+                                <action id="-26" name="Move to layer" sid="3419384351014817" type="Powerups">
+                                    <param id="0" name="Layer">2</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="5177359461487963" type="SyrupPowerBackground" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6784263102444115">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="2906134328087467" type="System">
+                    <param id="0" name="Variable">SyrupPower</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5259022654577953">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8914197647857238" type="Touch">
+                            <param id="0" name="Object">SyrupPowerBackground</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>right panel actions</comment>
+                        <event-block sid="9428339204191801">
+                            <conditions />
+                            <actions>
+                                <action id="4" name="Set animation" sid="7827046812936611" type="SyrupPowerBackground">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="699487393094353">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="6747992854459772" type="Powerups">
+                                            <param id="0" name="Instance variable">number</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <comment>Right Menu Not on Screen</comment>
+                                        <event-block sid="7240713092828541">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2624777898845391" type="SyrupPowerBackground">
+                                                    <param id="0" name="Instance variable">moved</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-26" name="Move to layer" sid="5674388191267011" type="Powerups">
+                                                    <param id="0" name="Layer">2</param>
+                                                </action>
+                                                <action id="-26" name="Move to layer" sid="8036131969666344" type="SyrupPowerBackground">
+                                                    <param id="0" name="Layer">2</param>
+                                                </action>
+                                                <action behavior="Pin" id="0" name="Pin to object" sid="5651066111277897" type="SyrupPowerBackground">
+                                                    <param id="0" name="Pin to">Powerups</param>
+                                                    <param id="1" name="Mode">1</param>
+                                                </action>
+                                                <action behavior="Pin" id="0" name="Pin to object" sid="8147631576150896" type="Menu">
+                                                    <param id="0" name="Pin to">Powerups</param>
+                                                    <param id="1" name="Mode">1</param>
+                                                </action>
+                                                <action id="-1" name="Set X" sid="944427051645551" type="Powerups">
+                                                    <param id="0" name="X">Powerups.X-Powerups.Height+260</param>
+                                                </action>
+                                                <action id="-24" name="Move to top" sid="5365706499275857" type="SyrupPowerBackground" />
+                                                <action id="-9" name="Set value" sid="1062601881762445" type="System">
+                                                    <param id="0" name="Variable">Enabled</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="8941746316986778" type="System">
+                                                    <param id="0" name="Seconds">0.1</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="509436877356924" type="SyrupPowerBackground">
+                                                    <param id="0" name="Instance variable">moved</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="1031935741493747" type="SyrupPowerBackground">
+                                                    <param id="0" name="Animation">&quot;Default2&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="80802149810182">
+                                                    <conditions>
+                                                        <condition id="-19" name="Pick all" sid="1318795725432679" type="System">
+                                                            <param id="0" name="Object">Powerups</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="6847735261028359" type="Powerups">
+                                                            <param id="0" name="Instance variable">number</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-26" name="Move to layer" sid="253408188489295" type="Powerups">
+                                                            <param id="0" name="Layer">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="4656104165866348">
+                                                    <conditions>
+                                                        <condition id="-19" name="Pick all" sid="7103859432909147" type="System">
+                                                            <param id="0" name="Object">SyrupPowerBackground</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-26" name="Move to layer" sid="4551372668063008" type="SyrupPowerBackground">
+                                                            <param id="0" name="Layer">1</param>
+                                                        </action>
+                                                        <action id="-24" name="Move to top" sid="9173376745833685" type="SyrupPowerBackground" />
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <comment>Right Menu on Screen</comment>
+                                        <event-block sid="3620369594193046">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="9186712920133587" type="SyrupPowerBackground">
+                                                    <param id="0" name="Instance variable">moved</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-26" name="Move to layer" sid="2332463008195608" type="Powerups">
+                                                    <param id="0" name="Layer">2</param>
+                                                </action>
+                                                <action id="-26" name="Move to layer" sid="3573374621637375" type="SyrupPowerBackground">
+                                                    <param id="0" name="Layer">2</param>
+                                                </action>
+                                                <action behavior="Pin" id="0" name="Pin to object" sid="4764888798017692" type="SyrupPowerBackground">
+                                                    <param id="0" name="Pin to">Powerups</param>
+                                                    <param id="1" name="Mode">1</param>
+                                                </action>
+                                                <action behavior="Pin" id="0" name="Pin to object" sid="1689180495318866" type="Menu">
+                                                    <param id="0" name="Pin to">Powerups</param>
+                                                    <param id="1" name="Mode">1</param>
+                                                </action>
+                                                <action id="-1" name="Set X" sid="6108041988035202" type="Powerups">
+                                                    <param id="0" name="X">Powerups.X+Powerups.Height-260</param>
+                                                </action>
+                                                <action id="-24" name="Move to top" sid="8778148896279792" type="SyrupPowerBackground" />
+                                                <action id="-9" name="Set value" sid="2734378379082721" type="System">
+                                                    <param id="0" name="Variable">Enabled</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="204367022797655" type="System">
+                                                    <param id="0" name="Seconds">0.1</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="2950163386069081" type="SyrupPowerBackground">
+                                                    <param id="0" name="Instance variable">moved</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="3318555088966664" type="SyrupPowerBackground">
+                                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="8854309628182661">
+                                                    <conditions>
+                                                        <condition id="-19" name="Pick all" sid="2995545658236261" type="System">
+                                                            <param id="0" name="Object">Powerups</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="3897513060813556" type="Powerups">
+                                                            <param id="0" name="Instance variable">number</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-26" name="Move to layer" sid="722842581611491" type="Powerups">
+                                                            <param id="0" name="Layer">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="3791650321730734">
+                                                    <conditions>
+                                                        <condition id="-19" name="Pick all" sid="10256677474197" type="System">
+                                                            <param id="0" name="Object">SyrupPowerBackground</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-26" name="Move to layer" sid="1706323930358864" type="SyrupPowerBackground">
+                                                            <param id="0" name="Layer">1</param>
+                                                        </action>
+                                                        <action id="-24" name="Move to top" sid="3137160946828929" type="SyrupPowerBackground" />
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>right menu move to bottom to prevent parallax</comment>
+                                <event-block sid="8812426593341994">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5650291633970628" type="Powerups">
+                                            <param id="0" name="Instance variable">number</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-26" name="Move to layer" sid="4843551003325712" type="Powerups">
+                                            <param id="0" name="Layer">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="6886887728371073" type="SyrupPowerBackground" />
+                                    </actions>
+                                </event-block>
+                                <comment>right menu move to bottom to prevent parallax</comment>
+                                <event-block sid="7978871281042629">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-26" name="Move to layer" sid="4959085791309884" type="Powerups">
+                                            <param id="0" name="Layer">2</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="6460736418182734" type="SyrupPowerBackground" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6525152307023642">
+            <conditions>
+                <condition id="3" name="On touched object" sid="5571235545509208" type="Touch">
+                    <param id="0" name="Object">BoxPower</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="1002711593969385" type="Menu">
+                    <param id="0" name="Instance variable">function</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="5750074366859234" type="System">
+                    <param id="0" name="Object to create">Box</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">BoxPower.X</param>
+                    <param id="3" name="Y">BoxPower.Y</param>
+                </action>
+                <action id="-7" name="Set size" sid="4372411164651385" type="Box">
+                    <param id="0" name="Width">40</param>
+                    <param id="1" name="Height">40</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4272938644078131">
+            <conditions>
+                <condition id="3" name="On touched object" sid="9418182192627069" type="Touch">
+                    <param id="0" name="Object">BallPower</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="6262316641456596" type="Menu">
+                    <param id="0" name="Instance variable">function</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="2355315020168703" type="System">
+                    <param id="0" name="Object to create">Ball</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">BallPower.X</param>
+                    <param id="3" name="Y">BallPower.Y</param>
+                </action>
+                <action id="-7" name="Set size" sid="6844892264468154" type="Ball">
+                    <param id="0" name="Width">40</param>
+                    <param id="1" name="Height">40</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8340915034995174">
+            <conditions>
+                <condition id="3" name="On touched object" sid="3786942206470223" type="Touch">
+                    <param id="0" name="Object">BridgePower</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="5347285809703002" type="Menu">
+                    <param id="0" name="Instance variable">function</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="6522809693343591" type="System">
+                    <param id="0" name="Object to create">Bridge</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">BridgePower.X</param>
+                    <param id="3" name="Y">BridgePower.Y</param>
+                </action>
+                <action id="-7" name="Set size" sid="9473743131502637" type="Bridge">
+                    <param id="0" name="Width">40</param>
+                    <param id="1" name="Height">20</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="9959675551645827" type="Bridge">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Sine" id="3" name="Set movement" sid="8363976400504473" type="Bridge">
+                    <param id="0" name="Movement">3</param>
+                </action>
+                <action behavior="Sine" id="4" name="Set wave" sid="2498673126509783" type="Bridge">
+                    <param id="0" name="Wave">1</param>
+                </action>
+                <action behavior="Sine" id="2" name="Set magnitude" sid="1855894398469261" type="Bridge">
+                    <param id="0" name="Magnitude">350</param>
+                </action>
+                <action behavior="Sine" id="1" name="Set period" sid="5061106922400061" type="Bridge">
+                    <param id="0" name="Period">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3966846945191666">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4002898959361722" type="Touch">
+                    <param id="0" name="Object">RockPower</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="586668584075493" type="Menu">
+                    <param id="0" name="Instance variable">function</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="5725911856481897" type="System">
+                    <param id="0" name="Object to create">Rock</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">RockPower.X</param>
+                    <param id="3" name="Y">RockPower.Y</param>
+                </action>
+                <action id="-7" name="Set size" sid="342643627200625" type="Rock">
+                    <param id="0" name="Width">40</param>
+                    <param id="1" name="Height">40</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8213245324730881">
+            <conditions>
+                <condition id="3" name="On touched object" sid="1834662698305034" type="Touch">
+                    <param id="0" name="Object">TrianglePower</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="3250971727602177" type="Menu">
+                    <param id="0" name="Instance variable">function</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="389895784678394" type="System">
+                    <param id="0" name="Object to create">Triangle</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">TrianglePower.X</param>
+                    <param id="3" name="Y">TrianglePower.Y</param>
+                </action>
+                <action id="-7" name="Set size" sid="5470180753300258" type="Triangle">
+                    <param id="0" name="Width">40</param>
+                    <param id="1" name="Height">40</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>When Objects are released, make it unable to pick up again</comment>
+        <event-block sid="4038048488959752">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="5152722539073157" type="Box" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="27" name="Set enabled" sid="3808046988651435" type="Box">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="7460952855154779" type="Box">
+                    <param id="0" name="Layer">0</param>
+                </action>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="3262686555147707" type="Box">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="7823530520337406" type="System">
+                    <param id="0" name="Variable">SyrupPower</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4913498117433886">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="9797694084744488" type="Ball" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="27" name="Set enabled" sid="5557742662438256" type="Ball">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="7894481181859394" type="Ball">
+                    <param id="0" name="Layer">0</param>
+                </action>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="4330368092360347" type="Ball">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="5795033772928422" type="System">
+                    <param id="0" name="Variable">SyrupPower</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3938789506810936">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="6480756535182382" type="Bridge" />
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="0" name="Set active" sid="4113959009763022" type="Bridge">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="8993825353171012" type="Bridge">
+                    <param id="0" name="Layer">0</param>
+                </action>
+                <action behavior="Physics" id="27" name="Set enabled" sid="7165659323042298" type="Bridge">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="8871841427704243" type="Bridge">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="6631531102210779" type="System">
+                    <param id="0" name="Variable">SyrupPower</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5929217678732361">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="7925765145304647" type="Rock" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="27" name="Set enabled" sid="7670545598500489" type="Rock">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="119297093076441" type="Rock">
+                    <param id="0" name="Layer">0</param>
+                </action>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="7605877733678024" type="Rock">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="359536371585529" type="System">
+                    <param id="0" name="Variable">SyrupPower</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3764158803202364">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="5114219283581894" type="Triangle" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="27" name="Set enabled" sid="3474448482618177" type="Triangle">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="1475616379499834" type="Triangle">
+                    <param id="0" name="Layer">0</param>
+                </action>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="3851923399534253" type="Triangle">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="9893157528959529" type="System">
+                    <param id="0" name="Variable">SyrupPower</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6362077438074867">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1200383691736369" type="Items">
+                    <param id="0" name="Object">Items</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="24" name="Set prevent rotation" sid="3240275170688666" type="Bridge">
+                    <param id="0" name="Setting">0</param>
+                </action>
+                <action behavior="Physics" id="24" name="Set prevent rotation" sid="6546161276777986" type="Box">
+                    <param id="0" name="Setting">0</param>
+                </action>
+                <action behavior="Physics" id="24" name="Set prevent rotation" sid="7481955613193164" type="Ball">
+                    <param id="0" name="Setting">0</param>
+                </action>
+                <action behavior="Physics" id="24" name="Set prevent rotation" sid="8114035206463608" type="Rock">
+                    <param id="0" name="Setting">0</param>
+                </action>
+                <action behavior="Physics" id="24" name="Set prevent rotation" sid="7938871443813308" type="Triangle">
+                    <param id="0" name="Setting">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="7250186312574578" title="Powerups">
+            <sub-events>
+                <event-block sid="5712337339736857">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="869210900889434" type="Touch">
+                            <param id="0" name="Object">SyrupDrop</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8706358807354222" type="SyrupDrop" />
+                        <action id="-10" name="Add to" sid="2828592897472094" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5426713122510698">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7309520504122259" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="6050860671125316" type="Syrup">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action behavior="Physics" id="18" name="Set elasticity" sid="4034171196452487" type="Syrup">
+                            <param id="0" name="Elasticity">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8607178474763133">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2024419329947935" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="6538542980803827" type="Syrup">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action behavior="Physics" id="18" name="Set elasticity" sid="1896958114315125" type="Syrup">
+                            <param id="0" name="Elasticity">0.9</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2723492055225356">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3354600072384096" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="4323208011122285" type="Syrup">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action behavior="Physics" id="18" name="Set elasticity" sid="114112917252477" type="Syrup">
+                            <param id="0" name="Elasticity">0.8</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9236203039238748">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4101902984582013" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="356640528091818" type="Syrup">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                        <action behavior="Physics" id="18" name="Set elasticity" sid="7767140749993597" type="Syrup">
+                            <param id="0" name="Elasticity">0.7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9461416726648266">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="486177990938489" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="2463236882451723" type="Syrup">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                        <action behavior="Physics" id="18" name="Set elasticity" sid="2766894387182509" type="Syrup">
+                            <param id="0" name="Elasticity">0.6</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1171786710669382">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9284128697080256" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="809847145071111" type="Syrup">
+                            <param id="0" name="Frame number">5</param>
+                        </action>
+                        <action behavior="Physics" id="18" name="Set elasticity" sid="9210125813389265" type="Syrup">
+                            <param id="0" name="Elasticity">0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7247068530627804">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8408410281857713" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="4801821855037423" type="Syrup">
+                            <param id="0" name="Frame number">6</param>
+                        </action>
+                        <action behavior="Physics" id="18" name="Set elasticity" sid="1984561557496583" type="Syrup">
+                            <param id="0" name="Elasticity">0.4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3826438420085444">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="528335722964968" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="3551864495321964" type="Syrup">
+                            <param id="0" name="Frame number">7</param>
+                        </action>
+                        <action behavior="Physics" id="18" name="Set elasticity" sid="4018890301323186" type="Syrup">
+                            <param id="0" name="Elasticity">0.3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1154168448949912">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5582081936810578" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="8539650001573571" type="Syrup">
+                            <param id="0" name="Frame number">8</param>
+                        </action>
+                        <action behavior="Physics" id="18" name="Set elasticity" sid="7988840749204514" type="Syrup">
+                            <param id="0" name="Elasticity">0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Ceiling</comment>
+                <event-block sid="3778370607873897">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8865931701135643" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5918285176877561" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Value">8</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Floor</comment>
+                <event-block sid="1774369269933168">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="849478721806197" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4981368533428267" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Starting Game</comment>
+        <event-block collapsed="1" sid="8925342978961559">
+            <conditions>
+                <condition id="0" name="On function" sid="845550577270103" type="Function">
+                    <param id="0" name="Name">&quot;enable&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1692828196497566" type="System">
+                    <param id="0" name="Variable">Enabled</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="4715481960651388" type="System">
+                    <param id="0" name="Variable">SyrupPower</param>
+                    <param id="1" name="Value">8</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="1258116478817669">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="5992679276333269" type="System">
+                            <param id="0" name="Object">Box</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="3364466873470859" type="Box">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="9982305868635351" type="Box">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7276658366975075">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="8628639553064349" type="System">
+                            <param id="0" name="Object">Ball</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="9194797090544054" type="Ball">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="4272307698534506" type="Ball">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3435962038461485">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="5582942220019681" type="System">
+                            <param id="0" name="Object">Bridge</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="6619430020173321" type="Bridge">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="6206503983075582" type="Bridge">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="4341745552279378" type="Bridge">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7160604557244837">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="207419752897861" type="System">
+                            <param id="0" name="Object">Triangle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="2323985945392738" type="Triangle">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="9820561214582629" type="Triangle">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5574894292939556">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="7350398258476001" type="System">
+                            <param id="0" name="Object">Rock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="5405661007774232" type="Rock">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="3767991555317081" type="Rock">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3598993263167008">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="2175387586459301" type="System">
+                            <param id="0" name="Object">Syrup</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="1104620340451215" type="Syrup">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block collapsed="1" sid="2400967404596835">
+            <conditions>
+                <condition id="0" name="On function" sid="6622679816633923" type="Function">
+                    <param id="0" name="Name">&quot;load&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9310083239346271">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="8271892959789845" type="ItemLocations">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7404065297842036">
+                            <conditions>
+                                <condition id="4" name="Compare current value" sid="3246527553361291" type="ItemLocations">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Value">&quot;Box&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="5283347493283986" type="Box">
+                                    <param id="0" name="Width">40</param>
+                                    <param id="1" name="Height">40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4060395940819877">
+                            <conditions>
+                                <condition id="4" name="Compare current value" sid="1992077005588992" type="ItemLocations">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Value">&quot;Ball&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="7445783793915672" type="Ball">
+                                    <param id="0" name="Width">40</param>
+                                    <param id="1" name="Height">40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="438877515106364">
+                            <conditions>
+                                <condition id="4" name="Compare current value" sid="2866072438063362" type="ItemLocations">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Value">&quot;Rock&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="3598222764572174" type="Rock">
+                                    <param id="0" name="Width">40</param>
+                                    <param id="1" name="Height">40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6591123799121513">
+                            <conditions>
+                                <condition id="4" name="Compare current value" sid="4186221760889964" type="ItemLocations">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Value">&quot;Triangle&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="9581524080781445" type="Triangle">
+                                    <param id="0" name="Width">40</param>
+                                    <param id="1" name="Height">40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="320162310232779">
+                            <conditions>
+                                <condition id="4" name="Compare current value" sid="4203603549451077" type="ItemLocations">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Value">&quot;Bridge&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="1902326016594077" type="Bridge">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5696393236631416">
+                            <conditions>
+                                <condition id="4" name="Compare current value" sid="4893575080876903" type="ItemLocations">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Value">&quot;Syrup&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="5513282521640436">
+                            <conditions>
+                                <condition id="4" name="Compare current value" sid="4175785806781451" type="ItemLocations">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Value">&quot;Ground&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8171199934618959">
+            <conditions>
+                <condition id="3" name="On touched object" sid="5858786572353367" type="Touch">
+                    <param id="0" name="Object">Loader</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="2830323931171054" type="Loader">
+                    <param id="0" name="Animation">&quot;Default2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="557846127690101" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="4" name="Set animation" sid="4477537539499687" type="Loader">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8218318623999627" type="ConfirmMenu">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="3" name="Set visible" sid="2966196315900805" type="project">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8960795167594893" type="projectname">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6051288810350348" type="Submit">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block bookmark="1" sid="9035672690224343">
+            <conditions>
+                <condition id="3" name="On touched object" sid="9117606180688311" type="Touch">
+                    <param id="0" name="Object">Submit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set local value" sid="2661372137739242" type="WebStorage">
+                    <param id="0" name="Key">&quot;usersave&quot;</param>
+                    <param id="1" name="Value">project.Text</param>
+                </action>
+                <action id="-16" name="Wait" sid="442879143304122" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9794236554131621" type="projectname">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7075952957262287" type="ConfirmMenu">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="3" name="Set visible" sid="1481740847658892" type="project">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9548735962349734" type="Submit">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8637864820625098">
+                    <conditions>
+                        <condition id="3" name="Local key exists" sid="1755438030073329" type="WebStorage">
+                            <param id="0" name="Key">&quot;usersave&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="754461188623266" type="ItemLocations">
+                            <param id="0" name="JSON">WebStorage.LocalValue(&quot;usersave&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9415547123894948" type="System">
+                            <param id="0" name="Variable">LAST</param>
+                            <param id="1" name="Value">WebStorage.LocalValue(&quot;usersave&quot;)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1201426861964203">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="7485407849709303" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="6835861495355416" type="Function">
+                                    <param id="0" name="Name">&quot;load&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="7151589655303126" type="Syrup">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="2812726180379016" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5631678721448385" type="Function">
+                                    <param id="0" name="Name">&quot;enable&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="4939234693638164" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9289273288724542" type="Function">
+                                    <param id="0" name="Name">&quot;timer&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9017884694814096">
+            <conditions>
+                <condition id="3" name="On touched object" sid="3265297271373778" type="Touch">
+                    <param id="0" name="Object">Quit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="8946997350226865" type="System" />
+                <action id="-2" name="Go to layout" sid="3687698970346707" type="System">
+                    <param id="0" name="Layout">Title</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5055392547669202">
+            <conditions>
+                <condition id="3" name="On touched object" sid="8757414002647515" type="Touch">
+                    <param id="0" name="Object">Replay</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="8636986032473683" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="2343469603719283">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3611475923018216" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1901032598611277" type="TotalScore">
+                    <param id="0" name="Text">&quot;Your Score:&quot; &amp; LevelScore</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

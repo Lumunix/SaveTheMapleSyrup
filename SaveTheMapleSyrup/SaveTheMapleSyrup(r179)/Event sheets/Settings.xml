@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Settings</name>
+    <events>
+        <event-group description="" sid="3632401383791963" title="Buttons">
+            <sub-events>
+                <event-block sid="1511851310978647">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="426189358067057" type="Touch">
+                            <param id="0" name="Object">Back</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8010200466195094" type="Back">
+                            <param id="0" name="Instance variable">IsPopUp</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6192174304474247">
+                            <conditions>
+                                <condition id="3" name="Local key exists" sid="9223887147038531" type="WebStorage">
+                                    <param id="0" name="Key">&quot;Alias&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set local value" sid="732507560603796" type="WebStorage">
+                                    <param id="0" name="Key">&quot;Alias&quot;</param>
+                                    <param id="1" name="Value">left(TextBox.Text,8)</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="3988987596063191" type="System">
+                                    <param id="0" name="Layout">Title</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4460337649592659">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6143428163766543" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9256352548072797">
+                                    <conditions>
+                                        <condition id="0" name="Compare text" sid="7735730968767562" type="TextBox">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                            <param id="1" name="Case">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set local value" sid="9611311718113161" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Alias&quot;</param>
+                                            <param id="1" name="Value">round(random(10000000,99999999))</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="5124997275027805" type="System">
+                                            <param id="0" name="Layout">Title</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6946205758858173">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2972253663412489" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set local value" sid="6341657302436233" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Alias&quot;</param>
+                                            <param id="1" name="Value">left(TextBox.Text,8)</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="3689943095724681" type="System">
+                                            <param id="0" name="Layout">Title</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9570498167254449">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1830021011684718" type="Touch">
+                            <param id="0" name="Object">Back</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1550513509122221" type="Back">
+                            <param id="0" name="Instance variable">IsPopUp</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="340745641307661" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="1744619818960487" type="ConfirmMenu">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3032312526572475" type="Back">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8484089314288309" type="Text2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="338084868657439" type="Submit">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4818970593754559" type="Warning">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8082778299553658" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6542087911949034">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8253691763189346" type="Touch">
+                            <param id="0" name="Object">ClearSave</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="1957772287463852" type="ConfirmMenu">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6549788897774807" type="Back">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5264052476222525" type="Text2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6675677183136321" type="Submit">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7940387460559918" type="Warning">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3271612213714572" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4160195332980389">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="3018137667739081" type="Touch">
+                            <param id="0" name="Object">Submit</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5747306734876993" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Clear local storage" sid="666300018355744" type="WebStorage" />
+                        <action id="-15" name="Set visible" sid="6883988899551249" type="ConfirmMenu">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3800514247089847" type="Text2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2891239475499986" type="Submit">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5390156311220233" type="Warning">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="4658301026502151" type="System" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3875128644127236">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6002676682278255" type="Back">
+                                    <param id="0" name="Instance variable">IsPopUp</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="352177307375162" type="Back">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="7077856155538559" title="Sliders">
+            <sub-events>
+                <comment>Sounds</comment>
+                <event-block sid="6375415494503693">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4799112727167165" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="6532448954737508">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="496646430703198" type="Touch">
+                                    <param id="0" name="Object">slid_line</param>
+                                </condition>
+                                <condition id="3" name="On touched object" sid="4491279060380333" type="Touch">
+                                    <param id="0" name="Object">slid_btn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="9635736140428059" type="slid_btn">
+                                    <param id="0" name="Instance variable">picked</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>release</comment>
+                        <event-block sid="4828488122322877">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Is in touch" sid="2612107226977996" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="9819480177379154" type="slid_btn">
+                                    <param id="0" name="Instance variable">picked</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5416829606038994">
+                            <conditions />
+                            <actions>
+                                <action disabled="1" id="5" name="Set frame" sid="6302385230547472" type="slid_btn">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action disabled="1" id="5" name="Set frame" sid="8986254152228864" type="slid_line">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>follow</comment>
+                        <event-block sid="2868551859524246">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="4100222012439489" type="slid_btn">
+                                    <param id="0" name="Instance variable">picked</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="9348269120009999" type="slid_btn">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="3950111528970514" type="slid_line">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="1604807856041994" type="slid_btn">
+                                    <param id="0" name="X">touch.X</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8988255237411698">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="9189757959631719" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5625765876648739">
+                                    <conditions>
+                                        <condition id="3" name="Local key exists" sid="7463730694071011" type="WebStorage">
+                                            <param id="0" name="Key">&quot;SoundVolumeBtn&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="6019162815143988" type="slid_btn">
+                                            <param id="0" name="X">float((WebStorage.LocalValue(&quot;SoundVolumeBtn&quot;)))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9074874433850825">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="7959834740545457" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="5048246264883772" type="slid_btn">
+                                            <param id="0" name="X">240</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>position correction&#x0D;&#x0A;and value computation</comment>
+                        <event-block sid="3419333055578627">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="9209624648500659" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="2159124547784127" type="slid_btn">
+                                    <param id="0" name="Y">slid_line.Y</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="8870007350474286" type="slid_btn">
+                                    <param id="0" name="X">clamp(self.X,slid_line.X,slid_line.X+slid_line.Width)</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="823775135347156" type="slid_btn">
+                                    <param id="0" name="X">(slid_line.snapped) ? round((self.X-slid_line.X)/(slid_line.Width/(slid_line.maxVal-slid_line.minVal)))*(slid_line.Width/(slid_line.maxVal-slid_line.minVal))+slid_line.X : self.X</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="1274471521520876" type="slid_line">
+                                    <param id="0" name="Instance variable">value</param>
+                                    <param id="1" name="Value">lerp(self.minVal,self.maxVal,(slid_btn.X-self.X)/slid_line.Width)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8281087043070921" type="System">
+                                    <param id="0" name="Variable">SoundVolume</param>
+                                    <param id="1" name="Value">slid_line.value</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="3732680747082532" type="WebStorage">
+                                    <param id="0" name="Key">&quot;SoundVolumeBtn&quot;</param>
+                                    <param id="1" name="Value">slid_btn.X</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="4450664339006305" type="WebStorage">
+                                    <param id="0" name="Key">&quot;SoundVolume&quot;</param>
+                                    <param id="1" name="Value">SoundVolume</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6186478587638514" title="HighscoreSettings">
+            <sub-events>
+                <event-block sid="4101534803598169">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="7264855709639924" type="System">
+                            <param id="0" name="First value">len(TextBox.Text)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="6532958901746404" type="TextBox">
+                            <param id="0" name="Text">left(TextBox.Text,8)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5034030524346471">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="1897770605024211" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="2324199088830207" type="TextBox">
+                            <param id="0" name="Text">WebStorage.LocalValue(&quot;Alias&quot;)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2363522096455831">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4460298068688353" type="System">
+                                    <param id="0" name="Variable">HighScoresEnabled</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="3077100433415347" type="HighScoreOnOff">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="4576898726742864" type="HighScoreOnOff">
+                                    <param id="0" name="Instance variable">ONOFF</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6179827076478021">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2677751330130566" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2231185205770618" type="HighScoreOnOff">
+                                    <param id="0" name="Animation">&quot;Default2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="3109343520373333" type="HighScoreOnOff">
+                                    <param id="0" name="Instance variable">ONOFF</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="637988954630931">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="942000154332844" type="Touch">
+                            <param id="0" name="Object">HighScoreOnOff</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4982768679786624">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="3281173509639423" type="HighScoreOnOff">
+                                    <param id="0" name="Instance variable">ONOFF</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="1297102933251335" type="HighScoreOnOff">
+                                    <param id="0" name="Animation">&quot;Default2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="5889098738602884" type="HighScoreOnOff">
+                                    <param id="0" name="Instance variable">ONOFF</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="935748078365579" type="System">
+                                    <param id="0" name="Variable">HighScoresEnabled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="2162684773001536" type="WebStorage">
+                                    <param id="0" name="Key">&quot;Highscores&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6544849539551068">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8128833554105906" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="1453292086838124" type="HighScoreOnOff">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="8546930916188479" type="HighScoreOnOff">
+                                    <param id="0" name="Instance variable">ONOFF</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6590675187634333" type="System">
+                                    <param id="0" name="Variable">HighScoresEnabled</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="1624002995309864" type="WebStorage">
+                                    <param id="0" name="Key">&quot;Highscores&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>alias screen</comment>
+        <event-block sid="4267327126731975">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6247742208086453" type="Touch">
+                    <param id="0" name="Object">Startnew</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="353693339161659">
+                    <conditions>
+                        <condition id="3" name="Local key exists" sid="3034385348302442" type="WebStorage">
+                            <param id="0" name="Key">&quot;Alias&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="7779775076401255" type="WebStorage">
+                            <param id="0" name="Key">&quot;Alias&quot;</param>
+                            <param id="1" name="Value">left(TextBox.Text,8)</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="463537357740386" type="System">
+                            <param id="0" name="Layout">LevelSelect</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2124656138344364">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5571687142586791" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7688096671495058">
+                            <conditions>
+                                <condition id="0" name="Compare text" sid="3423115762161093" type="TextBox">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set local value" sid="7768219051044536" type="WebStorage">
+                                    <param id="0" name="Key">&quot;Alias&quot;</param>
+                                    <param id="1" name="Value">round(random(10000000,99999999))</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="9345355393542932" type="System">
+                                    <param id="0" name="Layout">LevelSelect</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4320486311273576">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6101751685825319" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set local value" sid="2522853529327289" type="WebStorage">
+                                    <param id="0" name="Key">&quot;Alias&quot;</param>
+                                    <param id="1" name="Value">left(TextBox.Text,8)</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="3997301200780196" type="System">
+                                    <param id="0" name="Layout">LevelSelect</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9976295469890093">
+            <conditions>
+                <condition id="3" name="On touched object" sid="1747979758807569" type="Touch">
+                    <param id="0" name="Object">Creditsplat</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8282521960548744" type="System">
+                    <param id="0" name="Layout">Credits</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9105424031909553">
+                    <conditions>
+                        <condition id="3" name="Local key exists" sid="5832676988589468" type="WebStorage">
+                            <param id="0" name="Key">&quot;Alias&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="7512041966600592" type="WebStorage">
+                            <param id="0" name="Key">&quot;Alias&quot;</param>
+                            <param id="1" name="Value">left(TextBox.Text,8)</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="9817790931713941" type="System">
+                            <param id="0" name="Layout">LevelSelect</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4168445205471727">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2063093675785742" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8892871672588353">
+                            <conditions>
+                                <condition id="0" name="Compare text" sid="8487545294473166" type="TextBox">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set local value" sid="7769634194361217" type="WebStorage">
+                                    <param id="0" name="Key">&quot;Alias&quot;</param>
+                                    <param id="1" name="Value">round(random(10000000,99999999))</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="3194556883362734" type="System">
+                                    <param id="0" name="Layout">LevelSelect</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9881075746140485">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7070138979351385" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set local value" sid="1412692768069507" type="WebStorage">
+                                    <param id="0" name="Key">&quot;Alias&quot;</param>
+                                    <param id="1" name="Value">left(TextBox.Text,8)</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="1027897684771561" type="System">
+                                    <param id="0" name="Layout">LevelSelect</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

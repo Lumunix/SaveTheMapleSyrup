@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelPassed</name>
+    <events>
+        <event-group description="" sid="9928930065016235" title="LevelPassed">
+            <sub-events>
+                <event-block sid="8836775840334178">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="5923066109653682" type="Touch">
+                            <param id="0" name="Object">Quit</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6136133653189317">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4335778381382057" type="System">
+                                    <param id="0" name="Variable">LevelNumber</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">TotalLevels</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7704634994529607">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Local key exists" sid="4960671805918829" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;LevelNumber +1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set local value" sid="1478392112092911" type="WebStorage">
+                                            <param id="0" name="Key"> &quot;Level&quot;&amp;LevelNumber +1</param>
+                                            <param id="1" name="Value">&quot;1&quot;</param>
+                                        </action>
+                                        <action id="-21" name="Reset global variables" sid="3763142495926653" type="System" />
+                                        <action id="-2" name="Go to layout" sid="7589841898514738" type="System">
+                                            <param id="0" name="Layout">LevelSelect</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="869166638039651">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="4722617998177848" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-21" name="Reset global variables" sid="1884047873638864" type="System" />
+                                        <action id="-2" name="Go to layout" sid="3426311382562559" type="System">
+                                            <param id="0" name="Layout">LevelSelect</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7524459241637016">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6499016935300565" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-21" name="Reset global variables" sid="5579496235375353" type="System" />
+                                <action id="-2" name="Go to layout" sid="8978141891506137" type="System">
+                                    <param id="0" name="Layout">LevelSelect</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Ensure the next  level is unlocked</comment>
+                <event-block sid="8014522243258438">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="6742300199679289" type="Touch">
+                            <param id="0" name="Object">Replay</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9898682848254184" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Value">8</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1635155880747376" type="System">
+                            <param id="0" name="Variable">TempTime</param>
+                            <param id="1" name="Value">60</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8087516824563612" type="System">
+                            <param id="0" name="Variable">LevelScore</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5090477668326958">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8042510632679665" type="System">
+                                    <param id="0" name="Variable">LevelNumber</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">TotalLevels</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6879137844806039">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Local key exists" sid="4451990664315788" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;LevelNumber +1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set local value" sid="7224449216151738" type="WebStorage">
+                                            <param id="0" name="Key"> &quot;Level&quot;&amp;LevelNumber +1</param>
+                                            <param id="1" name="Value">&quot;1&quot;</param>
+                                        </action>
+                                        <action id="-25" name="Go to layout (by name)" sid="8046705408530978" type="System">
+                                            <param id="0" name="Layout">&quot;Level&quot; &amp; LevelNumber</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9521587148863524">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="44715353609293" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-25" name="Go to layout (by name)" sid="4559312813967792" type="System">
+                                            <param id="0" name="Layout">&quot;Level&quot; &amp; LevelNumber</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="392217676394386">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6599118611503945" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="961665831846467" type="System">
+                                    <param id="0" name="Layout">&quot;Level&quot; &amp; LevelNumber</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4975249752108431">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8247764430988148" type="Touch">
+                            <param id="0" name="Object">Continue</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2933782617427666" type="System">
+                            <param id="0" name="Variable">SyrupPower</param>
+                            <param id="1" name="Value">8</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3370506900927025" type="System">
+                            <param id="0" name="Variable">TempTime</param>
+                            <param id="1" name="Value">60</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6919675002654776" type="System">
+                            <param id="0" name="Variable">LevelScore</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5339871227499983">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6054499089620841" type="System">
+                                    <param id="0" name="Variable">LevelNumber</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">TotalLevels</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3355553959274452">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Local key exists" sid="7236674276366474" type="WebStorage">
+                                            <param id="0" name="Key">&quot;Level&quot;&amp;LevelNumber +1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set local value" sid="8641250135713702" type="WebStorage">
+                                            <param id="0" name="Key"> &quot;Level&quot;&amp;LevelNumber +1</param>
+                                            <param id="1" name="Value">&quot;1&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="6602628359153279" type="System">
+                                            <param id="0" name="Variable">LevelNumber</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-25" name="Go to layout (by name)" sid="1736205202586473" type="System">
+                                            <param id="0" name="Layout">&quot;Level&quot; &amp; LevelNumber</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4280742593418642">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1145993054304292" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="6446368762559965" type="System">
+                                            <param id="0" name="Variable">LevelNumber</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-25" name="Go to layout (by name)" sid="876366436752339" type="System">
+                                            <param id="0" name="Layout">&quot;Level&quot; &amp; LevelNumber</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8353523073246215">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="282490708169241" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-21" name="Reset global variables" sid="4933548018050124" type="System" />
+                                <action id="-2" name="Go to layout" sid="5746268706870722" type="System">
+                                    <param id="0" name="Layout">Title</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="2894956325594261">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6299079418224023" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4255007331466814">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7132655249242837" type="System">
+                            <param id="0" name="Variable">CurrentTime</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="9377997153877967" type="MultiplierColor">
+                            <param id="0" name="Color">rgb(102, 255, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2685068623295391" type="MultiplierColor">
+                            <param id="0" name="Text">&quot;X 2&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6581850444172537" type="System">
+                            <param id="0" name="Variable">Multiplier</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1014567339110537" type="System">
+                            <param id="0" name="Variable">TotalScore</param>
+                            <param id="1" name="Value">round((LevelScore + round(CurrentTime * 12) ) * Multiplier)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9170723075145668" type="TotalScore">
+                            <param id="0" name="Text">&quot;Score: &quot; &amp; TotalScore</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8122453675520777" type="LevelScore">
+                            <param id="0" name="Text">&quot;Points: &quot; &amp; LevelScore</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3401539465323463" type="TimeBonus">
+                            <param id="0" name="Text">&quot;Time Bonus: &quot;&amp;round(CurrentTime * 12)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5105305816611233">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6783875943545788" type="System">
+                            <param id="0" name="Variable">CurrentTime</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5136273255023796" type="System">
+                            <param id="0" name="Variable">CurrentTime</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="9875548089008718" type="MultiplierColor">
+                            <param id="0" name="Color">rgb(255, 255, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6816900330462772" type="MultiplierColor">
+                            <param id="0" name="Text">&quot;X 1.5&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2177983251798674" type="System">
+                            <param id="0" name="Variable">Multiplier</param>
+                            <param id="1" name="Value">1.5</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2397831378025719" type="System">
+                            <param id="0" name="Variable">TotalScore</param>
+                            <param id="1" name="Value">round((LevelScore + round(CurrentTime * 12) ) * Multiplier)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="371599835651492" type="TotalScore">
+                            <param id="0" name="Text">&quot;Score: &quot; &amp; TotalScore</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7524026729140067" type="LevelScore">
+                            <param id="0" name="Text">&quot;Points: &quot; &amp; LevelScore</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4341926701356091" type="TimeBonus">
+                            <param id="0" name="Text">&quot;Time Bonus: &quot;&amp;round(CurrentTime * 12)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9242172233556542">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8759736277579936" type="System">
+                            <param id="0" name="Variable">CurrentTime</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5939432765668002" type="System">
+                            <param id="0" name="Variable">CurrentTime</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="1346823728090641" type="MultiplierColor">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5187392259675584" type="MultiplierColor">
+                            <param id="0" name="Text">&quot;X 1&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9452251931583074" type="System">
+                            <param id="0" name="Variable">Multiplier</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6166640487465871" type="System">
+                            <param id="0" name="Variable">TotalScore</param>
+                            <param id="1" name="Value">round((LevelScore + round(CurrentTime * 12) ) * Multiplier)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5239741701704337" type="TotalScore">
+                            <param id="0" name="Text">&quot;Score: &quot; &amp; TotalScore</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2111063326666981" type="LevelScore">
+                            <param id="0" name="Text">&quot;Points: &quot; &amp; LevelScore</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8630623994977257" type="TimeBonus">
+                            <param id="0" name="Text">&quot;Time Bonus: &quot;&amp;round(CurrentTime * 12)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>1</comment>
+                <event-block sid="4959794910473644">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9371703509371283" type="System">
+                            <param id="0" name="Variable">TotalScore</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">int(WebStorage.LocalValue (&quot;Level&quot;&amp;LevelNumber&amp;&quot;PointGoal1&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="8473931910336266" type="WebStorage">
+                            <param id="0" name="Key">&quot;Level&quot;&amp;LevelNumber</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>2</comment>
+                <event-block sid="4657961617806229">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3718820390872735" type="System">
+                            <param id="0" name="Variable">TotalScore</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">int(WebStorage.LocalValue (&quot;Level&quot;&amp;LevelNumber&amp;&quot;PointGoal2&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="109410504166879" type="WebStorage">
+                            <param id="0" name="Key">&quot;Level&quot;&amp;LevelNumber</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>3</comment>
+                <event-block sid="5335044338186924">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4097053816824859" type="System">
+                            <param id="0" name="Variable">TotalScore</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">int(WebStorage.LocalValue (&quot;Level&quot;&amp;LevelNumber&amp;&quot;PointGoal3&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="2652836158089638" type="WebStorage">
+                            <param id="0" name="Key">&quot;Level&quot;&amp;LevelNumber</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5401083555516894">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="2087560682176345" type="WebStorage">
+                            <param id="0" name="Key">&quot;Level&quot;&amp;LevelNumber&amp;&quot;Score&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="9114421083532757" type="WebStorage">
+                            <param id="0" name="Key">&quot;Level&quot;&amp;LevelNumber&amp;&quot;Score&quot;</param>
+                            <param id="1" name="Value">TotalScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6797898653351173">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9559254308287686" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2472364827762411">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9089822826028417" type="System">
+                                    <param id="0" name="Variable">TotalScore</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">int(WebStorage.LocalValue (&quot;Level&quot;&amp;LevelNumber&amp;&quot;Score&quot;))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set local value" sid="7421167872703321" type="WebStorage">
+                                    <param id="0" name="Key">&quot;Level&quot;&amp;LevelNumber&amp;&quot;Score&quot;</param>
+                                    <param id="1" name="Value">TotalScore</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>SendScore</comment>
+                <event-block sid="7384956698159371">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6042856614626354" type="System">
+                            <param id="0" name="Variable">HighScoresEnabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5732084148680224">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3601255346355176" type="System">
+                                    <param id="0" name="Variable">TopScoreThreshold</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="4590388778500953" type="System">
+                                    <param id="0" name="Variable">TopScoreThreshold</param>
+                                    <param id="1" name="Value">&quot;0&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9211637858124697">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4937718222049553" type="System">
+                                    <param id="0" name="Variable">TotalScore</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">int(TopScoreThreshold)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Post to URL" sid="1589614201983231" type="AJAX">
+                                    <param id="0" name="Tag">&quot;PostScore&quot;</param>
+                                    <param id="1" name="URL">&quot;http://www.yellowdragon.net/cgi-bin/savescores.php?name=&quot;&amp; Alias &amp;&quot;&amp;score=&quot; &amp; TotalScore &amp;&quot;&amp;level=&quot; &amp; LevelNumber </param>
+                                    <param id="2" name="Data">&quot;&quot;</param>
+                                    <param id="3" name="Method">&quot;POST&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
